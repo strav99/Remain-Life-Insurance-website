@@ -33,13 +33,13 @@ Every internal link uses the canonical `/coverages/<slug>` pattern. Vercel rewri
 
 ## Open items before public launch
 
-These work for an internal preview but should be resolved before publicizing the site:
+The site is approved by the CA Department of Insurance (License #6019240, effective 5/11/2026) and live-ready. Items worth knowing about:
 
-1. **Email**: `office@remainlifeinsurance.com` is referenced in 60+ places. The mailbox isn't active yet, so `mailto:` links currently bounce. Either set up the inbox or swap to a working address.
-2. **CA License #4524855**: confirmed working as-is. Verify whether this is the LLC's organizational license or the principal's individual license; if the LLC has a separate org license, swap.
-3. **Open Graph / Twitter card meta tags + a 1200&times;630 OG image**: not added yet. Without these, link previews on iMessage/Slack/Twitter look generic. Easy add when you have the visual.
-4. **Canonical URL meta tags**: not added. With `cleanUrls` on, both `/coverages/1035-exchange` and `/1035-exchange` resolve to the same file. Add `<link rel="canonical">` on each page pointing at the `/coverages/<slug>` form to remove ambiguity for search engines.
-5. **Sitemap domain**: `sitemap.xml` and `robots.txt` reference `remainlifeinsurance.com`. If the production domain ends up different, update both files.
+1. **Email**: `office@remainlifeinsurance.com` is referenced in 60+ places. The mailbox isn't active yet, so `mailto:` links currently bounce. Either set up the inbox or swap to a working address. (Soft-launch decision: bouncing mailtos are acceptable while you wait on this.)
+2. **CA License #6019240** ✓ confirmed. LLC organizational license, effective 5/11/2026, expires 5/31/2028.
+3. **Open Graph / Twitter card meta tags** ✓ present on all 18 pages, each pulling its own page-specific title and description. Shared `/og-image.png` (1200&times;630) used as the preview image across all pages.
+4. **Canonical URL meta tags** ✓ present on all 18 pages, pointing to the `/coverages/<slug>` form (with the ILIT special case → `/coverages/ilit`).
+5. **Sitemap domain**: `sitemap.xml` and `robots.txt` reference `remainlifeinsurance.com`. Update both files if the production domain changes.
 6. **Page weight**: each spoke page is ~440KB because the Torrey Pine logo is base64-embedded inline. Fine for now, but extracting to a single shared `<img>` reference would cut total bytes substantially.
 
 ## Known consistency notes
