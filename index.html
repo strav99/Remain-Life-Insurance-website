@@ -197,7 +197,9 @@
     position: absolute;
     top: calc(100% + 14px);
     right: -16px;
-    min-width: 320px;
+    min-width: 340px;
+    max-height: min(620px, calc(100vh - 120px));
+    overflow-y: auto;
     background: var(--paper);
     border: 1px solid var(--paper-line);
     box-shadow: 0 16px 48px rgba(14, 28, 54, 0.12), 0 4px 12px rgba(14, 28, 54, 0.06);
@@ -219,7 +221,7 @@
   .nav-dropdown .menu li { padding: 0; }
   .nav-dropdown .menu a {
     display: block;
-    padding: 0.6rem 0.9rem;
+    padding: 0.5rem 0.9rem;
     font-family: var(--serif);
     font-size: 1.05rem;
     color: var(--navy);
@@ -242,6 +244,16 @@
     text-transform: uppercase;
     color: var(--gold);
   }
+  .nav-dropdown .menu .menu-group {
+    font-family: var(--label);
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.85rem 0.9rem 0.3rem;
+    margin: 0;
+  }
+  .nav-dropdown .menu .menu-group:first-child { padding-top: 0.3rem; }
 
   @media (max-width: 760px) {
     nav.primary .nav-dropdown { display: none; }
@@ -697,12 +709,23 @@
   .footer-practice-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.4rem 1.75rem;
+    gap: 2.25rem 1.75rem;
     padding-inline: clamp(2rem, 4vw, 3.5rem);
   }
-  @media (min-width: 600px) { .footer-practice-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 900px) { .footer-practice-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 1100px) { .footer-practice-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 600px)  { .footer-practice-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px)  { .footer-practice-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1200px) { .footer-practice-grid { grid-template-columns: repeat(5, 1fr); } }
+  .fpg-group { display: flex; flex-direction: column; }
+  .fpg-head {
+    font-family: var(--label);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    font-weight: 400;
+    margin: 0 0 0.85rem;
+    line-height: 1.4;
+  }
   .footer-practice-grid a {
     font-family: var(--sans);
     font-size: 0.9375rem;
@@ -711,7 +734,7 @@
     color: var(--mist);
     line-height: 1.5;
     transition: color 220ms ease;
-    padding: 0.4rem 0;
+    padding: 0.3rem 0;
     display: block;
   }
   .footer-practice-grid a:hover { color: var(--gold-soft); }
@@ -732,15 +755,14 @@
   }
   .footer-coverages-coda a {
     color: var(--gold-soft);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(201, 178, 126, 0.35);
-    transition: color 220ms ease, border-color 220ms ease;
-    padding-bottom: 1px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: color 220ms ease, text-decoration-color 220ms ease;
   }
-  .footer-coverages-coda a:hover {
-    color: var(--paper);
-    border-bottom-color: var(--paper);
-  }
+  .footer-coverages-coda a:hover { color: var(--paper); }
 
   .footer-divider {
     height: 1px;
@@ -945,23 +967,28 @@
           Coverages
         </button>
         <ul class="menu" id="coverages-menu" role="menu">
+          <li role="presentation" class="menu-group">Families &amp; Individuals</li>
           <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/variable-life">Variable Life</a></li>
+          <li role="presentation" class="menu-group">Estates &amp; Legacy</li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Business Owners &amp; Professionals</li>
+          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
+          <li role="presentation" class="menu-group">Already Have a Policy?</li>
+          <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
           <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
           <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
           <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
+          <li role="presentation" class="menu-group">Required &amp; Court-Ordered</li>
           <li role="none"><a role="menuitem" href="/coverages/divorce-decree">Court-Ordered Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/collateral-assignment">Lender-Required Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI Conversion</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
           <li role="none" class="view-all"><a role="menuitem" href="#coverages">View all &rarr;</a></li>
         </ul>
       </div>
@@ -1369,22 +1396,38 @@
     <div class="container">
       <h4 class="footer-section-label">Coverages</h4>
       <nav class="footer-practice-grid" aria-label="Footer coverages navigation">
-        <a href="/coverages/term-life">Term Life</a>
-        <a href="/coverages/whole-life">Whole Life</a>
-        <a href="/coverages/universal-life">Universal Life</a>
-        <a href="/coverages/variable-life">Variable Life</a>
-        <a href="/coverages/ilit">ILIT Funding</a>
-        <a href="/coverages/1035-exchange">1035 Exchange</a>
-        <a href="/coverages/term-conversion">Term Conversion</a>
-        <a href="/coverages/life-settlements">Life Settlements</a>
-        <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
-        <a href="/coverages/professional-pension">Professional Pension Plans</a>
-        <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
-        <a href="/coverages/legacy-giving">Legacy Giving</a>
-        <a href="/coverages/divorce-decree">Court-Ordered Coverage</a>
-        <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
-        <a href="/coverages/vgli">VGLI Conversion</a>
-        <a href="/coverages/premium-finance">Premium Finance</a>
+        <div class="fpg-group">
+          <h5 class="fpg-head">Families &amp; Individuals</h5>
+          <a href="/coverages/term-life">Term Life</a>
+          <a href="/coverages/whole-life">Whole Life</a>
+          <a href="/coverages/universal-life">Universal Life</a>
+          <a href="/coverages/variable-life">Variable Life</a>
+        </div>
+        <div class="fpg-group">
+          <h5 class="fpg-head">Estates &amp; Legacy</h5>
+          <a href="/coverages/ilit">ILIT Funding</a>
+          <a href="/coverages/legacy-giving">Legacy Giving</a>
+          <a href="/coverages/premium-finance">Premium Finance</a>
+        </div>
+        <div class="fpg-group">
+          <h5 class="fpg-head">Business Owners &amp; Professionals</h5>
+          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
+          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
+          <a href="/coverages/professional-pension">Professional Pension Plans</a>
+        </div>
+        <div class="fpg-group">
+          <h5 class="fpg-head">Already Have a Policy?</h5>
+          <a href="/coverages/policy-review">Policy Review</a>
+          <a href="/coverages/1035-exchange">1035 Exchange</a>
+          <a href="/coverages/term-conversion">Term Conversion</a>
+          <a href="/coverages/life-settlements">Life Settlements</a>
+        </div>
+        <div class="fpg-group">
+          <h5 class="fpg-head">Required &amp; Court-Ordered</h5>
+          <a href="/coverages/divorce-decree">Court-Ordered Coverage</a>
+          <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
+          <a href="/coverages/vgli">VGLI Conversion</a>
+        </div>
       </nav>
       <div class="footer-coverages-coda">
         <p>Contact Remain anytime for a <a href="/coverages/policy-review"><strong>policy review</strong></a>.</p>
