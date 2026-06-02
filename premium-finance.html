@@ -176,6 +176,26 @@
     padding-bottom: 2px;
   }
   nav.primary .cta:hover { color: var(--gold); }
+  nav.primary .nav-assess {
+    position: relative; display: inline-flex; align-items: center; gap: 0.45em;
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em;
+    color: var(--navy); padding: 0.5rem 0.95rem;
+    border: 1px solid var(--gold-soft); background: rgba(255,255,255,0.45);
+    transition: color 220ms ease, border-color 220ms ease, background 220ms ease;
+  }
+  nav.primary .nav-assess::after {
+    content: ""; position: absolute; inset: 3px;
+    border: 1px solid rgba(201,178,126,0.45); pointer-events: none;
+    transition: border-color 220ms ease;
+  }
+  nav.primary .nav-assess:hover { color: var(--gold); border-color: var(--gold); background: #fff; }
+  nav.primary .nav-assess:hover::after { border-color: var(--gold); }
+  nav.primary .nav-assess .na-arrow { color: var(--gold); }
+  @media (max-width: 760px) {
+    nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
+    nav.primary .nav-assess::after { inset: 2px; }
+    .wordmark-small .wm-text { display: none; }
+  }
 
   .nav-dropdown { position: relative; }
   .nav-dropdown .dropdown-trigger {
@@ -854,7 +874,7 @@
           <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
           <li role="none"><a role="menuitem" href="/coverages/divorce-decree">Court-Ordered Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/collateral-assignment">Lender-Required Coverage</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI Conversion</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI (Veterans Conversion)</a></li>
           <li role="none"><a role="menuitem" href="/coverages/premium-finance" class="current">Premium Finance</a></li>
           <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
           <li role="none" class="view-all"><a role="menuitem" href="index.html#coverages">View all &rarr;</a></li>
@@ -862,6 +882,7 @@
       </div>
 
       <a href="index.html#contact" class="cta">Begin a conversation</a>
+      <a href="/coverage-guide" class="nav-assess"><span class="na-label">Interactive Assessment</span><span class="na-arrow" aria-hidden="true">&rarr;</span></a>
     </nav>
   </div>
 </header>

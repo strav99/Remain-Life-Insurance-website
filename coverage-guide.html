@@ -6,20 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="/remain-mark.png" />
 <link rel="apple-touch-icon" href="/remain-mark.png" />
-<title>Whole Life Insurance &mdash; Remain Life Insurance</title>
-<meta name="description" content="Whole life insurance is permanent coverage with guaranteed level premiums, guaranteed cash value, and a guaranteed death benefit — a permanent asset class." />
-<link rel="canonical" href="https://remainlifeinsurance.com/coverages/whole-life" />
+<title>Interactive Assessment &mdash; Remain Life Insurance</title>
+<meta name="description" content="Answer a few quick questions about your situation and we&rsquo;ll point you toward the coverage worth exploring &mdash; then connect you with us, however you like. No forms, no figures, no pressure." />
+<link rel="canonical" href="https://remainlifeinsurance.com/coverages/term-life" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Remain Life Insurance" />
-<meta property="og:title" content="Whole Life Insurance — Remain Life Insurance" />
-<meta property="og:description" content="Whole life insurance is permanent coverage with guaranteed level premiums, guaranteed cash value, and a guaranteed death benefit. Structured correctly, it functions as a permanent asset class. Remain Life Insurance Services, LLC. Encinitas, California." />
-<meta property="og:url" content="https://remainlifeinsurance.com/coverages/whole-life" />
+<meta property="og:title" content="Term Life Insurance — Remain Life Insurance" />
+<meta property="og:description" content="Term life insurance is the simplest, most affordable form of coverage — pure protection for 10, 20, or 30 years. The right structure matters more than the lowest price. Remain Life Insurance Services, LLC. Encinitas, California." />
+<meta property="og:url" content="https://remainlifeinsurance.com/coverages/term-life" />
 <meta property="og:image" content="https://remainlifeinsurance.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Whole Life Insurance — Remain Life Insurance" />
-<meta name="twitter:description" content="Whole life insurance is permanent coverage with guaranteed level premiums, guaranteed cash value, and a guaranteed death benefit. Structured correctly, it functions as a permanent asset class. Remain Life Insurance Services, LLC. Encinitas, California." />
+<meta name="twitter:title" content="Term Life Insurance — Remain Life Insurance" />
+<meta name="twitter:description" content="Term life insurance is the simplest, most affordable form of coverage — pure protection for 10, 20, or 30 years. The right structure matters more than the lowest price. Remain Life Insurance Services, LLC. Encinitas, California." />
 <meta name="twitter:image" content="https://remainlifeinsurance.com/og-image.png" />
 
 
@@ -176,26 +176,6 @@
     padding-bottom: 2px;
   }
   nav.primary .cta:hover { color: var(--gold); }
-  nav.primary .nav-assess {
-    position: relative; display: inline-flex; align-items: center; gap: 0.45em;
-    font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em;
-    color: var(--navy); padding: 0.5rem 0.95rem;
-    border: 1px solid var(--gold-soft); background: rgba(255,255,255,0.45);
-    transition: color 220ms ease, border-color 220ms ease, background 220ms ease;
-  }
-  nav.primary .nav-assess::after {
-    content: ""; position: absolute; inset: 3px;
-    border: 1px solid rgba(201,178,126,0.45); pointer-events: none;
-    transition: border-color 220ms ease;
-  }
-  nav.primary .nav-assess:hover { color: var(--gold); border-color: var(--gold); background: #fff; }
-  nav.primary .nav-assess:hover::after { border-color: var(--gold); }
-  nav.primary .nav-assess .na-arrow { color: var(--gold); }
-  @media (max-width: 760px) {
-    nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
-    nav.primary .nav-assess::after { inset: 2px; }
-    .wordmark-small .wm-text { display: none; }
-  }
 
   .nav-dropdown { position: relative; }
   .nav-dropdown .dropdown-trigger {
@@ -766,6 +746,72 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ===== Interactive Assessment (Coverage Guide) ===== */
+  nav.primary .nav-assess {
+    position: relative; display: inline-flex; align-items: center; gap: 0.45em;
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em;
+    color: var(--navy); padding: 0.5rem 0.95rem;
+    border: 1px solid var(--gold-soft); background: rgba(255,255,255,0.45);
+    transition: color 220ms ease, border-color 220ms ease, background 220ms ease;
+  }
+  nav.primary .nav-assess::after {
+    content: ""; position: absolute; inset: 3px;
+    border: 1px solid rgba(201,178,126,0.45); pointer-events: none;
+    transition: border-color 220ms ease;
+  }
+  nav.primary .nav-assess:hover { color: var(--gold); border-color: var(--gold); background: #fff; }
+  nav.primary .nav-assess:hover::after { border-color: var(--gold); }
+  nav.primary .nav-assess .na-arrow { color: var(--gold); }
+  @media (max-width: 760px) {
+    nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
+    nav.primary .nav-assess::after { inset: 2px; }
+    .wordmark-small .wm-text { display: none; }
+  }
+
+  .cg-section { padding: clamp(1.5rem,4vw,3rem) 0 clamp(3rem,7vw,6rem); }
+  #cg-app {
+    max-width: 720px; margin: 0 auto; background: #fff;
+    border: 1px solid var(--paper-line); border-radius: 4px;
+    box-shadow: 0 30px 80px -45px rgba(17,34,64,0.40);
+    padding: clamp(1.75rem,4vw,3rem);
+  }
+  #cg-app .cg-eyebrow { font-family: var(--label); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
+  #cg-app .cg-progress { display: flex; gap: 6px; margin-bottom: 1.6rem; }
+  #cg-app .cg-progress span { height: 3px; flex: 1; background: var(--paper-line); border-radius: 2px; transition: background .3s; }
+  #cg-app .cg-progress span.on { background: var(--gold); }
+  #cg-app h2.cg-q { font-family: var(--serif); font-weight: 500; line-height: 1.12; font-size: clamp(1.6rem,4vw,2.2rem); letter-spacing: -0.01em; margin: 0 0 0.4rem; color: var(--navy); }
+  #cg-app .cg-sub { font-family: var(--sans); font-weight: 300; color: var(--fog); font-size: 0.95rem; margin-bottom: 1.6rem; }
+  #cg-app .cg-options { display: flex; flex-direction: column; gap: 0.6rem; }
+  #cg-app .cg-opt { text-align: left; width: 100%; font-family: var(--sans); font-size: 1rem; font-weight: 400; color: var(--navy); background: var(--paper); border: 1px solid var(--paper-line); border-radius: 3px; padding: 0.95rem 1.1rem; cursor: pointer; transition: border-color .18s, background .18s, transform .12s; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  #cg-app .cg-opt:hover { border-color: var(--gold); background: #fff; }
+  #cg-app .cg-opt:active { transform: translateY(1px); }
+  #cg-app .cg-opt .cg-arr { color: var(--gold); opacity: 0; transition: opacity .18s; }
+  #cg-app .cg-opt:hover .cg-arr { opacity: 1; }
+  #cg-app .cg-opt small { display: block; font-weight: 300; color: var(--fog); font-size: 0.85rem; margin-top: 0.18rem; }
+  #cg-app .cg-navrow { display: flex; justify-content: space-between; align-items: center; margin-top: 1.6rem; }
+  #cg-app .cg-back { font-family: var(--sans); font-size: 0.9rem; color: var(--fog); background: none; border: none; cursor: pointer; padding: 0.4rem 0; }
+  #cg-app .cg-back:hover { color: var(--navy); }
+  #cg-app .cg-back[disabled] { opacity: 0; pointer-events: none; }
+  #cg-app .cg-skip { font-family: var(--sans); font-size: 0.9rem; color: var(--gold); background: none; border: none; cursor: pointer; }
+  #cg-app .cg-skip:hover { text-decoration: underline; }
+  #cg-app .cg-recos { display: flex; flex-direction: column; gap: 0.7rem; margin: 1.4rem 0; }
+  #cg-app .cg-reco { display: block; text-decoration: none; color: inherit; border: 1px solid var(--paper-line); border-radius: 3px; padding: 1rem 1.1rem; background: var(--paper); transition: border-color .18s, background .18s; }
+  #cg-app .cg-reco:hover { border-color: var(--gold); background: #fff; }
+  #cg-app .cg-reco .cg-name { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--navy); }
+  #cg-app .cg-reco .cg-blurb { font-family: var(--sans); font-weight: 300; color: var(--fog); font-size: 0.92rem; margin-top: 0.2rem; }
+  #cg-app .cg-reco .cg-go { font-family: var(--label); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 0.55rem; display: inline-block; }
+  #cg-app .cg-disclaimer { font-family: var(--sans); font-weight: 300; font-style: italic; color: var(--fog); font-size: 0.9rem; line-height: 1.5; margin: 1.2rem 0 1.5rem; border-left: 2px solid var(--gold-soft); padding-left: 1rem; }
+  #cg-app .cg-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  #cg-app .cg-btn { flex: 1 1 auto; min-width: 120px; text-align: center; text-decoration: none; font-family: var(--sans); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.02em; padding: 0.85rem 1rem; border-radius: 3px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; transition: background .18s, color .18s, border-color .18s; }
+  #cg-app .cg-btn-primary { background: var(--navy); color: var(--paper); border: 1px solid var(--navy); }
+  #cg-app .cg-btn-primary:hover { background: var(--navy-mid); }
+  #cg-app .cg-btn-outline { background: transparent; color: var(--navy); border: 1px solid var(--paper-line); }
+  #cg-app .cg-btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  #cg-app .cg-restart { margin-top: 1.4rem; text-align: center; }
+  #cg-app .cg-restart button { font-family: var(--sans); font-size: 0.9rem; color: var(--fog); background: none; border: none; cursor: pointer; }
+  #cg-app .cg-restart button:hover { color: var(--navy); text-decoration: underline; }
+
 </style>
 <script type="application/ld+json">
 {
@@ -773,10 +819,10 @@
   "@graph": [
     {
       "@type": "Service",
-      "serviceType": "Whole Life Insurance",
-      "name": "Whole Life Insurance",
-      "url": "https://remainlifeinsurance.com/coverages/whole-life",
-      "description": "Whole life insurance is permanent coverage with guaranteed level premiums, guaranteed cash value, and a guaranteed death benefit — a permanent asset class.",
+      "serviceType": "Term Life Insurance",
+      "name": "Term Life Insurance",
+      "url": "https://remainlifeinsurance.com/coverages/term-life",
+      "description": "Term life insurance is the simplest, most affordable coverage — pure protection for 10, 20, or 30 years. The right structure matters more than the lowest price.",
       "provider": {
         "@type": "InsuranceAgency",
         "name": "Remain Life Insurance",
@@ -832,8 +878,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Whole Life Insurance",
-          "item": "https://remainlifeinsurance.com/coverages/whole-life"
+          "name": "Term Life Insurance",
+          "item": "https://remainlifeinsurance.com/coverages/term-life"
         }
       ]
     }
@@ -860,8 +906,8 @@
           Coverages
         </button>
         <ul class="menu" id="coverages-menu" role="menu">
-          <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/whole-life" class="current">Whole Life</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/term-life" class="current">Term Life</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/variable-life">Variable Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
@@ -882,7 +928,7 @@
       </div>
 
       <a href="index.html#contact" class="cta">Begin a conversation</a>
-      <a href="/coverage-guide" class="nav-assess"><span class="na-label">Interactive Assessment</span><span class="na-arrow" aria-hidden="true">&rarr;</span></a>
+      <a href="/coverage-guide" class="nav-assess" aria-current="page"><span class="na-label">Interactive Assessment</span><span class="na-arrow" aria-hidden="true">&rarr;</span></a>
     </nav>
   </div>
 </header>
@@ -894,137 +940,236 @@
   <div class="container">
     <div class="label-row">
       <hr class="rule-gold" />
-      <span class="label">Whole Life</span>
+      <span class="label">Interactive Assessment</span>
     </div>
-
-    <h1 class="display tri-color">
-      <span class="line-1">Built for a Lifetime.</span>
-      <span class="line-2">Structured for</span>
-      <span class="line-3">Generations.</span>
-    </h1>
-
+    <h1 class="display">A few questions. <em>A clear place to start.</em></h1>
     <p class="lede">
-      Whole life is permanent coverage with guaranteed level premiums, guaranteed cash value, and a guaranteed death benefit. Premiums run roughly eight to ten times term for the same face amount &mdash; but the comparison is the wrong frame. Structured correctly with a strong mutual carrier and the right paid-up additions design, whole life functions as a permanent asset class: tax-deferred compounding, borrowable liquidity, and a death benefit that has never been reduced by a quality carrier in over a century.
+      Not sure which kind of coverage fits? Tell us a little about your situation and
+      we&rsquo;ll point you toward what&rsquo;s worth exploring &mdash; then connect you with
+      us, however you like. No forms to fill out, no figures to enter, no pressure.
     </p>
-
-    <a href="index.html#contact" class="btn hero-band-cta">
-      <span>Begin a conversation</span>
-      <span class="arrow">&rarr;</span>
-    </a>
   </div>
 </section>
 
-<!-- ──────────────────────── TWO PATHS ──────────────────────── -->
-<section class="paths">
+<!-- ──────────────────────── ASSESSMENT WIDGET ──────────────────────── -->
+<section class="cg-section">
   <div class="container">
-    <div class="section-head reveal">
-      <hr class="rule-gold" />
-      <h2 class="display">Two designs. One <em>permanent foundation.</em></h2>
-      <p class="sub">A whole life policy is the same product either way &mdash; the structure determines what it does. The same premium can be loaded toward a larger death benefit or toward faster cash value accumulation.</p>
-    </div>
-
-    <div class="paths-box reveal">
-
-      <div class="path-col">
-        <span class="path-label">Path One &middot; Death Benefit</span>
-        <h3>Maximum permanent coverage. <em>Guaranteed for life.</em></h3>
-        <p class="body">
-          Traditional whole life structure. Premiums weighted toward base coverage; the policy delivers the largest possible death benefit per premium dollar, guaranteed never to lapse if premiums are paid.
-        </p>
-        <ul>
-          <li>Largest death benefit per premium dollar</li>
-          <li>Coverage guaranteed for life with level premiums</li>
-          <li>Designed for legacy, ILIT funding, and estate planning</li>
-        </ul>
-        <div class="best-for">
-          <span class="k">Best for</span>
-          <span class="v">Legacy. Estate planning. Family protection.</span>
-        </div>
-      </div>
-
-      <div class="path-col">
-        <span class="path-label">Path Two &middot; Cash Value</span>
-        <h3>Permanent coverage. <em>Built as an asset.</em></h3>
-        <p class="body">
-          Paid-up additions rider loaded design. More of every premium dollar drives cash value, which compounds tax-deferred and can be borrowed against without underwriting. Death benefit is smaller relative to premium but still permanent.
-        </p>
-        <ul>
-          <li>Faster cash value accumulation</li>
-          <li>Borrowable liquidity without credit underwriting</li>
-          <li>Behaves as a bond-substitute inside a portfolio</li>
-        </ul>
-        <div class="best-for">
-          <span class="k">Best for</span>
-          <span class="v">Bond replacement. Family banking. Permanent asset.</span>
-        </div>
-      </div>
-
-    </div>
+    <div id="cg-app"></div>
   </div>
 </section>
 
-<!-- ──────────────────────── WORKING AGAINST YOU ──────────────────────── -->
-<section class="scenario">
-  <div class="container">
-    <div class="section-head reveal" style="margin-bottom:0;">
-      <hr class="rule-gold" />
-      <h2 class="display">The right structure today <em>compounds for forty years.</em></h2>
-      <p class="closing">
-        If any of these describe your situation, whole life chosen for structure &mdash; not just product &mdash; can become the most enduring asset on the family balance sheet.
-      </p>
-    </div>
+<script>
+(function(){
+  const PHONE = '+17607505433';
+  const EMAIL = 'office@remainlifeinsurance.com';
 
-    <ol class="scenario-list reveal">
-      <li>
-        <span class="num">i.</span>
-        <span>You&rsquo;ve maxed your retirement vehicles and want a tax-deferred asset class uncorrelated with public markets.</span>
-      </li>
-      <li>
-        <span class="num">ii.</span>
-        <span>You own a closely-held business and need a permanent asset that funds a buy-sell, an estate tax bill, or both.</span>
-      </li>
-      <li>
-        <span class="num">iii.</span>
-        <span>You already own whole life and don&rsquo;t know whether it&rsquo;s structured for cash accumulation, death benefit, or somewhere in between.</span>
-      </li>
-      <li>
-        <span class="num">iv.</span>
-        <span>You&rsquo;re thinking about funding an ILIT &mdash; and want the policy designed for that purpose from day one.</span>
-      </li>
-    </ol>
-  </div>
-</section>
+  const CAT = {
+    'term-life':            {name:'Term Life',               blurb:'Affordable protection for a set season of life.',           url:'/coverages/term-life'},
+    'whole-life':           {name:'Whole Life',              blurb:'Lifelong coverage that builds guaranteed cash value.',      url:'/coverages/whole-life'},
+    'universal-life':       {name:'Universal Life',          blurb:'Permanent coverage with flexible premiums.',                url:'/coverages/universal-life'},
+    'variable-life':        {name:'Variable Life',           blurb:'Permanent coverage with market-based growth.',              url:'/coverages/variable-life'},
+    'ilit':                 {name:'ILIT Funding',            blurb:'Keep proceeds outside your taxable estate.',                url:'/coverages/ilit'},
+    'legacy-giving':        {name:'Legacy Giving',           blurb:'Turn a policy into a lasting charitable gift.',             url:'/coverages/legacy-giving'},
+    'premium-finance':      {name:'Premium Finance',         blurb:'Fund large policies without tying up capital.',             url:'/coverages/premium-finance'},
+    'key-person':           {name:'Key Person & Buy-Sell',   blurb:'Protect the business from the loss of an owner or key person.', url:'/coverages/key-person'},
+    '412e3':                {name:'412(e)(3) Plans',         blurb:'A fully-insured, tax-advantaged defined-benefit plan.',     url:'/coverages/412e3'},
+    'professional-pension': {name:'Professional Pension',    blurb:'Build retirement income for your practice.',                url:'/coverages/professional-pension'},
+    'policy-review':        {name:'Policy Review',           blurb:'An honest, no-pressure look at what you already own.',      url:'/coverages/policy-review'},
+    '1035-exchange':        {name:'1035 Exchange',           blurb:'Move to a better policy without a tax hit.',                url:'/coverages/1035-exchange'},
+    'term-conversion':      {name:'Term Conversion',         blurb:'Convert term to permanent &mdash; no new exam.',            url:'/coverages/term-conversion'},
+    'life-settlements':     {name:'Life Settlements',        blurb:'See what an unwanted policy may be worth.',                 url:'/coverages/life-settlements'},
+    'vgli':                 {name:'VGLI Conversion',         blurb:'Convert service coverage to civilian life insurance.',      url:'/coverages/vgli'},
+    'divorce-decree':       {name:'Court-Ordered Coverage',  blurb:'Meet a court or divorce-decree requirement.',               url:'/coverages/divorce-decree'},
+    'collateral-assignment':{name:'Lender-Required Coverage',blurb:"Satisfy a lender's collateral assignment.",                 url:'/coverages/collateral-assignment'}
+  };
 
-<!-- ──────────────────────── HANDOFF ─ CONTACT ──────────────────────── -->
-<section class="handoff">
-  <div class="container">
-    <div class="section-head reveal">
-      <hr class="rule-gold" />
-      <h2 class="display">Whole life, <em>structured and placed by Remain.</em></h2>
-      <p class="sub">
-        Remain Life Insurance Services, LLC models whole life across forty- to sixty-year horizons, compares mutual carriers and dividend histories, and illustrates paid-up additions designs at your actual age and structure goals &mdash; then places the policy directly.
-      </p>
-      <p class="sub closing-line">
-        Request a whole life illustration, or speak with a Remain advisor directly.
-      </p>
-    </div>
+  const Q1 = {
+    prompt:'What brings you in today?',
+    sub:'Pick the one that fits best &mdash; we&rsquo;ll narrow it from there.',
+    options:[
+      {label:'Protecting my family or income',          audience:'family'},
+      {label:'Planning an estate or leaving a legacy',  audience:'estate'},
+      {label:'Protecting or funding a business',        audience:'business'},
+      {label:'Reviewing a policy I already own',        audience:'existing'},
+      {label:'I&rsquo;m required to carry coverage',    audience:'required'}
+    ]
+  };
 
-    <div class="actions reveal">
-      <a href="index.html#contact" class="btn">
-        <span>Speak with a Remain advisor</span>
-        <span class="arrow">&rarr;</span>
-      </a>
-      <a href="mailto:office@remainlifeinsurance.com?subject=Request%20a%20whole%20life%20illustration" class="btn btn-ghost">
-        <span>Request a whole life illustration</span>
-        <span class="arrow">&rarr;</span>
-      </a>
-    </div>
-  </div>
-</section>
+  const BRANCH = {
+    family:{ context:'for my family',
+      q2:{prompt:'What kind of protection feels right?', options:[
+        {label:'A season of life', sub:'While the kids grow up and the mortgage is paid', products:['term-life']},
+        {label:'Lifelong, with cash value I can build', sub:'Coverage that never expires', products:['whole-life','universal-life']},
+        {label:'Lifelong, with growth tied to the markets', products:['variable-life']},
+        {label:'I&rsquo;m honestly not sure yet', products:['term-life','whole-life']}
+      ]},
+      q3:{prompt:'What matters most right now?', options:[
+        {label:'Keeping premiums as low as possible', products:['term-life']},
+        {label:'Locking in coverage that never expires', products:['whole-life']},
+        {label:'Flexibility to adjust premiums over time', products:['universal-life']},
+        {label:'Building wealth alongside protection', products:['whole-life','variable-life']}
+      ]} },
+    estate:{ context:'for my estate and legacy planning',
+      q2:{prompt:'What&rsquo;s the goal?', options:[
+        {label:'Pass wealth to heirs efficiently', sub:'Manage or offset estate taxes', products:['ilit']},
+        {label:'Leave a gift to a cause I care about', products:['legacy-giving']},
+        {label:'Fund a large policy without tying up capital', products:['premium-finance']},
+        {label:'I&rsquo;m just gathering ideas', products:['ilit','legacy-giving']}
+      ]},
+      q3:{prompt:'Where are you in the process?', options:[
+        {label:'I work with an attorney or advisor already', products:['ilit']},
+        {label:'Just starting to explore', products:['ilit','policy-review']},
+        {label:'I have existing policies to fold in', products:['policy-review','1035-exchange']},
+        {label:'Not sure yet', products:['ilit']}
+      ]} },
+    business:{ context:'for my business',
+      q2:{prompt:'What are you protecting?', options:[
+        {label:'The loss of an owner or key employee', products:['key-person']},
+        {label:'A smooth ownership transition', sub:'Funding a buy-sell agreement', products:['key-person']},
+        {label:'A tax-advantaged retirement plan for the business', products:['412e3']},
+        {label:'A pension for myself as a professional', products:['professional-pension']}
+      ]},
+      q3:{prompt:'Your business is&hellip;', options:[
+        {label:'A few owners or partners', products:['key-person']},
+        {label:'Owner-operated with key staff', products:['key-person']},
+        {label:'A professional practice', sub:'Doctor, attorney, etc.', products:['professional-pension','412e3']},
+        {label:'Closely held, planning succession', products:['key-person','ilit']}
+      ]} },
+    existing:{ context:'to review a policy I already own',
+      q2:{prompt:'What&rsquo;s prompting the review?', options:[
+        {label:'I think I might be overpaying', products:['policy-review']},
+        {label:'I want to switch to a better policy', products:['1035-exchange']},
+        {label:'My term is ending and I want to keep coverage', products:['term-conversion']},
+        {label:'I&rsquo;m wondering what an old policy is worth', products:['life-settlements']}
+      ]},
+      q3:{prompt:'How old is the policy, roughly?', options:[
+        {label:'Recent &mdash; under 5 years', products:['policy-review']},
+        {label:'5 to 15 years', products:['policy-review','1035-exchange']},
+        {label:'15+ years', products:['1035-exchange','life-settlements']},
+        {label:'Not sure', products:['policy-review']}
+      ]} },
+    required:{ context:'to meet a coverage requirement',
+      q2:{prompt:'What&rsquo;s requiring it?', options:[
+        {label:'A divorce decree or court order', products:['divorce-decree']},
+        {label:'A lender or business loan', sub:'Collateral assignment', products:['collateral-assignment']},
+        {label:'I&rsquo;m a veteran converting service coverage', products:['vgli']},
+        {label:'Something else', products:['policy-review']}
+      ]},
+      q3:{prompt:'What&rsquo;s the timing?', options:[
+        {label:'I need it right away', products:[]},
+        {label:'Within a few months', products:[]},
+        {label:'Just planning ahead', products:[]},
+        {label:'Not sure', products:[]}
+      ]} }
+  };
+
+  const Q4 = {
+    prompt:'Last thing &mdash; do any of these apply?',
+    sub:'Optional, but it helps us point you to the right path.',
+    options:[
+      {label:'I&rsquo;m a veteran', products:['vgli']},
+      {label:'I&rsquo;m going through a divorce or court order', products:['divorce-decree']},
+      {label:'A lender requires coverage', products:['collateral-assignment']},
+      {label:'I have a retirement plan to coordinate', products:['professional-pension']},
+      {label:'None of these', products:[]}
+    ]
+  };
+
+  let step = 0, audience = null, picks = {q2:null, q3:null, q4:null};
+  const app = document.getElementById('cg-app');
+
+  function progress(n){
+    let h = '<div class="cg-progress">';
+    for(let i=0;i<4;i++) h += '<span class="' + (i<=n?'on':'') + '"></span>';
+    return h + '</div>';
+  }
+
+  function render(){
+    if(step===0) return renderQ(Q1,0,'q1');
+    if(step===1) return renderQ(BRANCH[audience].q2,1,'q2');
+    if(step===2) return renderQ(BRANCH[audience].q3,2,'q3');
+    if(step===3) return renderQ(Q4,3,'q4');
+    return renderResult();
+  }
+
+  function renderQ(q,n,key){
+    const opts = q.options.map(function(o,i){
+      const sub = o.sub ? '<small>'+o.sub+'</small>' : '';
+      return '<button class="cg-opt" data-i="'+i+'"><span>'+o.label+sub+'</span><span class="cg-arr">&rarr;</span></button>';
+    }).join('');
+    const skip = (key==='q4') ? '<button class="cg-skip" id="cg-skip">Skip</button>' : '<span></span>';
+    app.innerHTML =
+      '<div class="cg-eyebrow">Interactive Assessment &middot; Step '+(n+1)+' of 4</div>' +
+      progress(n) +
+      '<h2 class="cg-q">'+q.prompt+'</h2>' +
+      (q.sub ? '<p class="cg-sub">'+q.sub+'</p>' : '') +
+      '<div class="cg-options">'+opts+'</div>' +
+      '<div class="cg-navrow">' +
+        '<button class="cg-back" '+(n===0?'disabled':'')+' id="cg-back">&larr; Back</button>' +
+        skip +
+      '</div>';
+    app.querySelectorAll('.cg-opt').forEach(function(btn){
+      btn.onclick = function(){
+        const o = q.options[+btn.dataset.i];
+        if(key==='q1') audience = o.audience; else picks[key] = o;
+        step++; render();
+      };
+    });
+    const back = document.getElementById('cg-back'); if(back) back.onclick = function(){ step--; render(); };
+    const sk = document.getElementById('cg-skip'); if(sk) sk.onclick = function(){ picks.q4 = {products:[]}; step++; render(); };
+  }
+
+  function shortlist(){
+    const order = [];
+    [picks.q2,picks.q3,picks.q4].forEach(function(p){ if(p && p.products) p.products.forEach(function(s){ order.push(s); }); });
+    const seen = {}, out = [];
+    order.forEach(function(s){ if(!seen[s]){ seen[s]=1; out.push(s); } });
+    if(out.length===0){
+      const fb = {family:['term-life','whole-life'],estate:['ilit','legacy-giving'],business:['key-person','professional-pension'],existing:['policy-review'],required:['divorce-decree']}[audience] || ['policy-review'];
+      fb.forEach(function(s){ out.push(s); });
+    }
+    return out.slice(0,3);
+  }
+
+  function strip(html){ const d = document.createElement('div'); d.innerHTML = html; return d.textContent || ''; }
+
+  function renderResult(){
+    const list = shortlist();
+    const names = list.map(function(s){ return CAT[s].name; });
+    const phrase = names.length===1 ? names[0]
+      : names.length===2 ? names[0]+' and '+names[1]
+      : names.slice(0,-1).join(', ')+', and '+names[names.length-1];
+    const ctx = BRANCH[audience].context;
+    const msg = 'Hi Remain — I used the guide on your site and it pointed me toward '+strip(phrase)+'. I\'m looking '+ctx+' and I\'d like to talk it through.';
+    const subject = 'Coverage Guide — '+strip(phrase);
+    const recos = list.map(function(s){
+      const c = CAT[s];
+      return '<a class="cg-reco" href="'+c.url+'"><div class="cg-name">'+c.name+'</div><div class="cg-blurb">'+c.blurb+'</div><span class="cg-go">Learn more &rarr;</span></a>';
+    }).join('');
+    const sms = 'sms:'+PHONE+'?&body='+encodeURIComponent(msg);
+    const mailto = 'mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(msg);
+    app.innerHTML =
+      '<div class="cg-eyebrow">Interactive Assessment &middot; Your starting point</div>' +
+      progress(3) +
+      '<h2 class="cg-q">Based on what you told us&hellip;</h2>' +
+      '<p class="cg-sub">These are worth exploring. Tap any to learn more, or reach us directly &mdash; we&rsquo;ll pick up where you left off.</p>' +
+      '<div class="cg-recos">'+recos+'</div>' +
+      '<p class="cg-disclaimer">This is a starting point, not a recommendation. The right fit always depends on your full picture &mdash; that&rsquo;s a conversation, and we&rsquo;re glad to have it with no pressure.</p>' +
+      '<div class="cg-actions">' +
+        '<a class="cg-btn cg-btn-primary" href="tel:'+PHONE+'">Call us</a>' +
+        '<a class="cg-btn cg-btn-outline" href="'+sms+'">Text us</a>' +
+        '<a class="cg-btn cg-btn-outline" href="'+mailto+'">Email us</a>' +
+      '</div>' +
+      '<div class="cg-restart"><button id="cg-restart">&larr; Start over</button></div>';
+    document.getElementById('cg-restart').onclick = function(){ step=0; audience=null; picks={q2:null,q3:null,q4:null}; render(); };
+  }
+
+  render();
+})();
+</script>
 
 </main>
 
-<!-- ──────────────────────── FOOTER ──────────────────────── -->
 <footer class="site">
 
   <div class="footer-top">
@@ -1032,8 +1177,8 @@
       <div class="footer-practice-frame">
         <h4 class="footer-section-label">Coverages</h4>
         <nav class="footer-practice-grid" aria-label="Footer coverages navigation">
-          <a href="/coverages/term-life">Term Life</a>
-          <a href="/coverages/whole-life" class="current">Whole Life</a>
+          <a href="/coverages/term-life" class="current">Term Life</a>
+          <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
           <a href="/coverages/variable-life">Variable Life</a>
           <a href="/coverages/ilit">ILIT Funding</a>
