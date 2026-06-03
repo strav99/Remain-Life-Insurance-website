@@ -188,17 +188,28 @@
     position: relative; display: inline-flex; align-items: center; gap: 0.45em;
     font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em;
     color: var(--navy); padding: 0.5rem 0.95rem;
-    border: 1px solid var(--gold-soft); background: rgba(255,255,255,0.45);
+    border: 1px solid var(--gold-soft); border-radius: 8px; background: rgba(255,255,255,0.45);
     transition: color 220ms ease, border-color 220ms ease, background 220ms ease;
   }
   nav.primary .nav-assess::after {
-    content: ""; position: absolute; inset: 3px;
+    content: ""; position: absolute; inset: 3px; border-radius: 5px;
     border: 1px solid rgba(201,178,126,0.45); pointer-events: none;
     transition: border-color 220ms ease;
   }
   nav.primary .nav-assess:hover { color: var(--gold); border-color: var(--gold); background: #fff; }
   nav.primary .nav-assess:hover::after { border-color: var(--gold); }
   nav.primary .nav-assess .na-arrow { color: var(--gold); }
+  .brand-col .footer-about { margin: 0.95rem 0 0; }
+  .brand-col .footer-about a {
+    display: inline-flex; align-items: center; gap: 0.45em;
+    font-family: var(--label); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--navy-deep); text-decoration: none;
+    border-bottom: 1px solid rgba(14,28,54,0.30); padding-bottom: 3px;
+    transition: color 220ms ease, border-color 220ms ease;
+  }
+  .brand-col .footer-about a:hover { color: var(--gold); border-color: var(--gold); }
+  .brand-col .footer-about .fa-arrow { font-family: var(--serif); font-size: 13px; letter-spacing: 0; }
   @media (max-width: 760px) {
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
@@ -1072,6 +1083,7 @@
             </span>
           </div>
           <p>A California-licensed life insurance brokerage based in Encinitas, serving North County San Diego and clients throughout California.</p>
+          <p class="footer-about"><a href="/about">About Us <span class="fa-arrow" aria-hidden="true">&rarr;</span></a></p>
         </div>
 
         <div class="info-col">
