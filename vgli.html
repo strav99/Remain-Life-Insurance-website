@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -776,6 +781,17 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── FAQ ────────────────────────────────────────────────────────────── */
+  .faq { background: var(--paper-soft); border-top: 1px solid var(--paper-line); }
+  .faq-list { max-width: 70ch; margin-top: 0.5rem; }
+  .faq-item { padding: 1.6rem 0; border-bottom: 1px solid var(--paper-line); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+    color: var(--navy); margin: 0 0 0.6rem;
+  }
+  .faq-item p { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--navy-mid); }
 </style>
 <script type="application/ld+json">
 {
@@ -848,6 +864,54 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is VGLI — and what is the deadline?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Veterans' Group Life Insurance is the program that lets separating service members convert SGLI coverage. You have one year and 120 days from separation to apply — and within the first 240 days, no health questions are asked. That no-underwriting window is the program's single most valuable feature."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is VGLI the cheapest option?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "At younger ages it is competitive, but VGLI premiums rise every five years and keep rising. A healthy veteran locking a 20- or 30-year level term policy will usually pay far less over time. The honest answer depends on your health — which is why we compare both before recommending either."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I have health issues from my service?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Then VGLI may be exactly right — inside the 240-day window it accepts you regardless of health. We will tell you plainly when keeping VGLI is the better move; guaranteed coverage you could not otherwise qualify for is worth more than any premium difference."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I convert VGLI to a permanent policy later?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — VGLI can be converted to an individual permanent policy with a participating commercial carrier, without proof of good health. It is one of the program's least-known features, and for veterans whose health has changed, sometimes the most valuable."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I'm still inside my 240 days — what should I do first?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Compare while the window is open. With guaranteed VGLI acceptance as your fallback, you can shop civilian term rates from maximum strength. The one mistake is letting the window lapse before deciding."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -1002,6 +1066,39 @@
         <span>You&rsquo;ve heard VGLI is &ldquo;fine,&rdquo; but haven&rsquo;t compared it side-by-side with commercial coverage at your current age.</span>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- ──────────────────────── FAQ ──────────────────────── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <hr class="rule-gold" />
+      <h2 class="display">Common <em>questions.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What is VGLI &mdash; and what is the deadline?</h3>
+        <p>Veterans' Group Life Insurance is the program that lets separating service members convert SGLI coverage. You have one year and 120 days from separation to apply &mdash; and within the first 240 days, no health questions are asked. That no-underwriting window is the program's single most valuable feature.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is VGLI the cheapest option?</h3>
+        <p>At younger ages it is competitive, but VGLI premiums rise every five years and keep rising. A healthy veteran locking a 20- or 30-year level term policy will usually pay far less over time. The honest answer depends on your health &mdash; which is why we compare both before recommending either.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I have health issues from my service?</h3>
+        <p>Then VGLI may be exactly right &mdash; inside the 240-day window it accepts you regardless of health. We will tell you plainly when keeping VGLI is the better move; guaranteed coverage you could not otherwise qualify for is worth more than any premium difference.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I convert VGLI to a permanent policy later?</h3>
+        <p>Yes &mdash; VGLI can be converted to an individual permanent policy with a participating commercial carrier, without proof of good health. It is one of the program's least-known features, and for veterans whose health has changed, sometimes the most valuable.</p>
+      </div>
+      <div class="faq-item">
+        <h3>I'm still inside my 240 days &mdash; what should I do first?</h3>
+        <p>Compare while the window is open. With guaranteed VGLI acceptance as your fallback, you can shop civilian term rates from maximum strength. The one mistake is letting the window lapse before deciding.</p>
+      </div>
+    </div>
   </div>
 </section>
 

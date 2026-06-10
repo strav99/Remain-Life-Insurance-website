@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -776,6 +781,17 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── FAQ ────────────────────────────────────────────────────────────── */
+  .faq { background: var(--paper-soft); border-top: 1px solid var(--paper-line); }
+  .faq-list { max-width: 70ch; margin-top: 0.5rem; }
+  .faq-item { padding: 1.6rem 0; border-bottom: 1px solid var(--paper-line); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+    color: var(--navy); margin: 0 0 0.6rem;
+  }
+  .faq-item p { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--navy-mid); }
 </style>
 <script type="application/ld+json">
 {
@@ -848,6 +864,54 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is a 1035 exchange?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A provision of the tax code — Section 1035 — that lets you replace one insurance contract with another without recognizing the built-up gain as taxable income. Done correctly, the old policy's value moves directly into the new contract, carrier to carrier; you never take receipt of the money."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What can be exchanged into what?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Life insurance can become life insurance or an annuity. An annuity can become another annuity. The road runs one way: an annuity cannot be exchanged back into life insurance. Long-term-care hybrid contracts are also eligible under current rules."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is a 1035 exchange really tax-free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The exchange itself does not trigger income tax — gains stay deferred and your cost basis carries over. Tax-free is not cost-free, though: the old contract may carry surrender charges, and the new one starts its own schedule. We put both on paper before recommending anything."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When does an exchange make sense?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "When the old policy no longer fits: costs that newer contracts beat, performance that lagged, a death benefit you no longer need — or need more of — or health that has improved enough to qualify for better rates. Sometimes the right answer is keeping the policy you own; the analysis tells you which."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the catches?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Three big ones: a new surrender-charge schedule, a fresh two-year contestability period, and outstanding policy loans that can make an exchange partially taxable. All three are manageable — but only if they are identified before the paperwork, not after."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -1002,6 +1066,39 @@
         <span>You&rsquo;ve heard about 1035 exchanges, but don&rsquo;t know whether you qualify or where to start.</span>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- ──────────────────────── FAQ ──────────────────────── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <hr class="rule-gold" />
+      <h2 class="display">Common <em>questions.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What is a 1035 exchange?</h3>
+        <p>A provision of the tax code &mdash; Section 1035 &mdash; that lets you replace one insurance contract with another without recognizing the built-up gain as taxable income. Done correctly, the old policy's value moves directly into the new contract, carrier to carrier; you never take receipt of the money.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What can be exchanged into what?</h3>
+        <p>Life insurance can become life insurance or an annuity. An annuity can become another annuity. The road runs one way: an annuity cannot be exchanged back into life insurance. Long-term-care hybrid contracts are also eligible under current rules.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a 1035 exchange really tax-free?</h3>
+        <p>The exchange itself does not trigger income tax &mdash; gains stay deferred and your cost basis carries over. Tax-free is not cost-free, though: the old contract may carry surrender charges, and the new one starts its own schedule. We put both on paper before recommending anything.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When does an exchange make sense?</h3>
+        <p>When the old policy no longer fits: costs that newer contracts beat, performance that lagged, a death benefit you no longer need &mdash; or need more of &mdash; or health that has improved enough to qualify for better rates. Sometimes the right answer is keeping the policy you own; the analysis tells you which.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are the catches?</h3>
+        <p>Three big ones: a new surrender-charge schedule, a fresh two-year contestability period, and outstanding policy loans that can make an exchange partially taxable. All three are manageable &mdash; but only if they are identified before the paperwork, not after.</p>
+      </div>
+    </div>
   </div>
 </section>
 

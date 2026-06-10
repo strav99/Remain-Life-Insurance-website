@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -785,6 +790,17 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── FAQ ────────────────────────────────────────────────────────────── */
+  .faq { background: var(--paper-soft); border-top: 1px solid var(--paper-line); }
+  .faq-list { max-width: 70ch; margin-top: 0.5rem; }
+  .faq-item { padding: 1.6rem 0; border-bottom: 1px solid var(--paper-line); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+    color: var(--navy); margin: 0 0 0.6rem;
+  }
+  .faq-item p { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--navy-mid); }
 </style>
 <script type="application/ld+json">
 {
@@ -857,6 +873,54 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is a 412(e)(3) plan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A 412(e)(3) — sometimes called a fully insured defined-benefit plan — is an IRS-qualified retirement plan funded exclusively with guaranteed annuity and whole life insurance contracts. The guarantees are the point: because benefits are insured rather than projected, contribution limits are often substantially higher than traditional plans allow."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much can I contribute — and deduct?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on age, income, and plan design, but for owners in their 50s and 60s, deductible contributions can run well into six figures annually — often several times what a 401(k) with profit sharing allows. The amount is determined actuarially from the benefit the plan promises, not from a fixed statutory cap."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Who is a 412(e)(3) right for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The classic fit is a high-income owner or professional, typically 45 or older, with few employees, stable income, and a shorter runway to retirement — someone who wants the largest deductible contributions available and prefers guarantees over market exposure."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is a 412(e)(3) actually IRS-approved?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes — it is written into the tax code; the name is the code section. The scrutiny attached to its predecessor era came from abusive designs, not from the structure itself. Clean design, a reputable third-party administrator, and an enrolled actuary keep the plan well inside the lines — which is exactly how we build them."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there market risk inside the plan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. By rule, the plan holds only guaranteed insurance contracts — fixed annuities and whole life. That is the trade: you give up market upside inside the plan in exchange for contractually guaranteed benefits and maximum deductibility."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -1028,6 +1092,39 @@
         <span>Your taxable income is high enough that a $200,000 to $400,000 deductible contribution would materially change your tax bill.</span>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- ──────────────────────── FAQ ──────────────────────── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <hr class="rule-gold" />
+      <h2 class="display">Common <em>questions.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What is a 412(e)(3) plan?</h3>
+        <p>A 412(e)(3) &mdash; sometimes called a fully insured defined-benefit plan &mdash; is an IRS-qualified retirement plan funded exclusively with guaranteed annuity and whole life insurance contracts. The guarantees are the point: because benefits are insured rather than projected, contribution limits are often substantially higher than traditional plans allow.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much can I contribute &mdash; and deduct?</h3>
+        <p>It depends on age, income, and plan design, but for owners in their 50s and 60s, deductible contributions can run well into six figures annually &mdash; often several times what a 401(k) with profit sharing allows. The amount is determined actuarially from the benefit the plan promises, not from a fixed statutory cap.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who is a 412(e)(3) right for?</h3>
+        <p>The classic fit is a high-income owner or professional, typically 45 or older, with few employees, stable income, and a shorter runway to retirement &mdash; someone who wants the largest deductible contributions available and prefers guarantees over market exposure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a 412(e)(3) actually IRS-approved?</h3>
+        <p>Yes &mdash; it is written into the tax code; the name is the code section. The scrutiny attached to its predecessor era came from abusive designs, not from the structure itself. Clean design, a reputable third-party administrator, and an enrolled actuary keep the plan well inside the lines &mdash; which is exactly how we build them.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there market risk inside the plan?</h3>
+        <p>No. By rule, the plan holds only guaranteed insurance contracts &mdash; fixed annuities and whole life. That is the trade: you give up market upside inside the plan in exchange for contractually guaranteed benefits and maximum deductibility.</p>
+      </div>
+    </div>
   </div>
 </section>
 

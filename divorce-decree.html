@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -785,6 +790,17 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── FAQ ────────────────────────────────────────────────────────────── */
+  .faq { background: var(--paper-soft); border-top: 1px solid var(--paper-line); }
+  .faq-list { max-width: 70ch; margin-top: 0.5rem; }
+  .faq-item { padding: 1.6rem 0; border-bottom: 1px solid var(--paper-line); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+    color: var(--navy); margin: 0 0 0.6rem;
+  }
+  .faq-item p { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--navy-mid); }
 </style>
 <script type="application/ld+json">
 {
@@ -857,6 +873,54 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How fast can I get life insurance required by a divorce decree?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most decrees allow 30 to 90 days. Depending on age, health, and the amount ordered, accelerated and no-exam underwriting can place coverage in days rather than weeks — but the clock matters, so the right time to start is the day the obligation is signed, not the week the deadline arrives."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Who owns the policy — and who has to be the beneficiary?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They're separate roles, and the decree usually addresses both. Typically the paying spouse owns the policy and the decree names the former spouse (or the children, often through a custodian or trust) as beneficiary — sometimes irrevocably, so the designation can't be quietly changed later. We structure the policy to match the order's exact language."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I can't qualify for the amount the court ordered?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It happens — health, age, or budget can put the ordered amount out of reach. The answer is documentation and alternatives: applying in good faith, shopping carriers with more favorable underwriting, considering laddered or graded policies, and giving your family-law attorney what they need to address the gap with the court."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can a policy I already own satisfy the decree?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Often, yes — if the amount, term, and beneficiary designation match what the order requires, and you can provide proof of coverage. The common pitfalls are group coverage that ends with a job and beneficiary designations that don't meet the decree's wording. A review against the order takes minutes and can save a second premium."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the coverage end when child support ends?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It should be designed to. The cleanest structure matches the policy's term to the obligation — coverage that runs to the last support payment or the youngest child's independence, and no longer. That keeps premiums proportional to what the court actually requires."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -1028,6 +1092,39 @@
         <span>You already have a policy in place but no one has confirmed it still satisfies the decree as the obligation evolves.</span>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- ──────────────────────── FAQ ──────────────────────── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <hr class="rule-gold" />
+      <h2 class="display">Common <em>questions.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>How fast can I get life insurance required by a divorce decree?</h3>
+        <p>Most decrees allow 30 to 90 days. Depending on age, health, and the amount ordered, accelerated and no-exam underwriting can place coverage in days rather than weeks &mdash; but the clock matters, so the right time to start is the day the obligation is signed, not the week the deadline arrives.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who owns the policy &mdash; and who has to be the beneficiary?</h3>
+        <p>They&rsquo;re separate roles, and the decree usually addresses both. Typically the paying spouse owns the policy and the decree names the former spouse (or the children, often through a custodian or trust) as beneficiary &mdash; sometimes irrevocably, so the designation can&rsquo;t be quietly changed later. We structure the policy to match the order&rsquo;s exact language.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I can&rsquo;t qualify for the amount the court ordered?</h3>
+        <p>It happens &mdash; health, age, or budget can put the ordered amount out of reach. The answer is documentation and alternatives: applying in good faith, shopping carriers with more favorable underwriting, considering laddered or graded policies, and giving your family-law attorney what they need to address the gap with the court.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can a policy I already own satisfy the decree?</h3>
+        <p>Often, yes &mdash; if the amount, term, and beneficiary designation match what the order requires, and you can provide proof of coverage. The common pitfalls are group coverage that ends with a job and beneficiary designations that don&rsquo;t meet the decree&rsquo;s wording. A review against the order takes minutes and can save a second premium.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the coverage end when child support ends?</h3>
+        <p>It should be designed to. The cleanest structure matches the policy&rsquo;s term to the obligation &mdash; coverage that runs to the last support payment or the youngest child&rsquo;s independence, and no longer. That keeps premiums proportional to what the court actually requires.</p>
+      </div>
+    </div>
   </div>
 </section>
 

@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -785,6 +790,17 @@
     }
     .js .reveal.in { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── FAQ ────────────────────────────────────────────────────────────── */
+  .faq { background: var(--paper-soft); border-top: 1px solid var(--paper-line); }
+  .faq-list { max-width: 70ch; margin-top: 0.5rem; }
+  .faq-item { padding: 1.6rem 0; border-bottom: 1px solid var(--paper-line); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 {
+    font-family: var(--serif); font-size: 1.45rem; font-weight: 600;
+    color: var(--navy); margin: 0 0 0.6rem;
+  }
+  .faq-item p { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--navy-mid); }
 </style>
 <script type="application/ld+json">
 {
@@ -857,6 +873,54 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is a collateral assignment of life insurance?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is a lien on a life insurance policy. The lender — the assignee — gets first claim on the death benefit, up to the outstanding loan balance; anything above that goes to your beneficiaries as usual. You remain the owner of the policy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the SBA require life insurance for my loan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For SBA 7(a) loans, lenders commonly require life insurance on owners and key individuals where the business depends on them — and the loan cannot close until the assignment is in place. The specific amount and term come from the lender's commitment letter, so we match the policy to that document exactly."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How fast can lender-required coverage be issued?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Often fast enough to keep a closing on schedule. For many ages and amounts, accelerated underwriting issues coverage in days without an exam; the collateral-assignment form is filed with the carrier right after issue. The key is starting the application the moment the lender's requirement appears."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the bank own my policy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. You own the policy, pay the premiums, and name the beneficiaries. The lender's claim is limited to the loan balance — and when the loan is paid off, the assignment is released and the full benefit belongs to your family again."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should it be term or permanent coverage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Usually term, matched to the loan — a ten-year note gets a ten-year policy. Permanent coverage can make sense when the borrowing is ongoing or the policy serves a second purpose, such as buy-sell funding or key person protection, beyond the loan itself."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -1028,6 +1092,39 @@
         <span>You already have coverage but the lender says the existing assignment doesn&rsquo;t satisfy their requirements.</span>
       </li>
     </ol>
+  </div>
+</section>
+
+<!-- ──────────────────────── FAQ ──────────────────────── -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <hr class="rule-gold" />
+      <h2 class="display">Common <em>questions.</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <h3>What is a collateral assignment of life insurance?</h3>
+        <p>It is a lien on a life insurance policy. The lender &mdash; the assignee &mdash; gets first claim on the death benefit, up to the outstanding loan balance; anything above that goes to your beneficiaries as usual. You remain the owner of the policy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the SBA require life insurance for my loan?</h3>
+        <p>For SBA 7(a) loans, lenders commonly require life insurance on owners and key individuals where the business depends on them &mdash; and the loan cannot close until the assignment is in place. The specific amount and term come from the lender's commitment letter, so we match the policy to that document exactly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How fast can lender-required coverage be issued?</h3>
+        <p>Often fast enough to keep a closing on schedule. For many ages and amounts, accelerated underwriting issues coverage in days without an exam; the collateral-assignment form is filed with the carrier right after issue. The key is starting the application the moment the lender's requirement appears.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the bank own my policy?</h3>
+        <p>No. You own the policy, pay the premiums, and name the beneficiaries. The lender's claim is limited to the loan balance &mdash; and when the loan is paid off, the assignment is released and the full benefit belongs to your family again.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should it be term or permanent coverage?</h3>
+        <p>Usually term, matched to the loan &mdash; a ten-year note gets a ten-year policy. Permanent coverage can make sense when the borrowing is ongoing or the policy serves a second purpose, such as buy-sell funding or key person protection, beyond the loan itself.</p>
+      </div>
+    </div>
   </div>
 </section>
 

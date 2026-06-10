@@ -214,6 +214,11 @@
     nav.primary .nav-assess { font-size: 11px; letter-spacing: 0.03em; padding: 0.4rem 0.6rem; }
     nav.primary .nav-assess::after { inset: 2px; }
     .wordmark-small .wm-text { display: none; }
+    header.site .row {
+      height: auto; min-height: 56px; flex-wrap: wrap;
+      padding-top: 0.55rem; padding-bottom: 0.6rem; row-gap: 0.4rem;
+    }
+    nav.primary { flex-wrap: wrap; justify-content: flex-end; gap: 0.45rem 0.9rem; margin-left: auto; }
   }
 
   .nav-dropdown { position: relative; }
@@ -788,18 +793,24 @@
 
   /* ── About page ─────────────────────────────────────────────────────── */
   .about-section { padding: clamp(3rem, 7vh, 5.5rem) 0; }
-  .about-section.alt { background: var(--paper-soft); border-top: 1px solid var(--paper-line); border-bottom: 1px solid var(--paper-line); }
   .about-prose { max-width: 64ch; }
   .about-prose p { font-size: 1.0625rem; line-height: 1.8; color: var(--navy-mid); margin: 0 0 1.4em; }
   .about-prose p:last-child { margin-bottom: 0; }
   .carrier-names {
-    max-width: 64ch; margin: 1.6rem 0; padding: 1.5rem 0;
+    margin: 2.4rem 0 0; padding: 1.9rem 0;
     border-top: 1px solid var(--paper-line); border-bottom: 1px solid var(--paper-line);
-    font-family: var(--serif); font-size: 1.5rem; line-height: 1.7;
-    color: var(--navy); letter-spacing: 0.01em;
+    font-family: var(--serif); font-size: clamp(1.35rem, 2.2vw, 1.7rem); line-height: 1.9;
+    color: var(--navy); letter-spacing: 0.01em; text-align: center;
   }
-  .carrier-names .sep { color: var(--gold); margin: 0 0.55rem; }
-  @media (max-width: 640px) { .carrier-names { font-size: 1.2rem; } }
+  .carrier-names .nm { white-space: nowrap; }
+  .carrier-names .sep { color: var(--gold); margin: 0 0.7rem; }
+  .about-pull {
+    font-family: var(--serif); font-style: italic; font-weight: 500;
+    font-size: clamp(1.35rem, 2.4vw, 1.7rem); line-height: 1.55;
+    color: var(--navy); text-align: center; max-width: 46ch;
+    margin: 2.6rem auto 0;
+  }
+  .about-pull strong { color: var(--gold); font-weight: 500; }
 </style>
 <script type="application/ld+json">
 {
@@ -885,11 +896,20 @@
       <span class="label">About Us</span>
     </div>
 
-    <h1 class="display">Life insurance is <em>in our DNA.</em></h1>
+    <h1 class="display tri-color">
+      <span class="line-1">Two Partners,</span>
+      <span class="line-2">Raised in Life Insurance,</span>
+      <span class="line-3">Here to Remain.</span>
+    </h1>
 
     <p class="lede">
       Remain was founded by two partners who grew up in life insurance families. Life Insurance has been part of our DNA from the early days where our fathers built their careers with carriers we represent today. And we began our own journeys in Life Insurance over 20 years ago.
     </p>
+
+    <a href="index.html#contact" class="btn hero-band-cta">
+      <span>Begin a conversation</span>
+      <span class="arrow">&rarr;</span>
+    </a>
   </div>
 </section>
 
@@ -899,34 +919,43 @@
     <div class="section-head reveal">
       <hr class="rule-gold" />
       <h2 class="display">Independent. <em>By design.</em></h2>
-    </div>
-
-    <div class="about-prose reveal">
-      <p>We are an independent agency. Through our strategic partner, Modern Life, we represent more than 20 of the country&rsquo;s most respected carriers &mdash; among them:</p>
+      <p class="sub">We are an independent agency. Through our strategic partner, Modern Life, we represent more than 20 of the country&rsquo;s most respected carriers &mdash; among them:</p>
     </div>
 
     <p class="carrier-names reveal">
-      Guardian <span class="sep" aria-hidden="true">&middot;</span> John Hancock <span class="sep" aria-hidden="true">&middot;</span> MassMutual <span class="sep" aria-hidden="true">&middot;</span> Minnesota Life <span class="sep" aria-hidden="true">&middot;</span> New York Life <span class="sep" aria-hidden="true">&middot;</span> Pacific Life <span class="sep" aria-hidden="true">&middot;</span> Prudential
+      <span class="nm">Guardian</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">John Hancock</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">MassMutual</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">Minnesota Life</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">New York Life</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">Pacific Life</span><span class="sep" aria-hidden="true">&middot;</span><span class="nm">Prudential</span>
     </p>
 
-    <div class="about-prose reveal">
-      <p>We are never tied to a single product, and we never force one. We shop the field and bring you the coverage that actually fits.</p>
-    </div>
+    <p class="about-pull reveal">We are never tied to a single product, and we never force one. We shop the field and bring you <strong>the coverage that actually fits.</strong></p>
   </div>
 </section>
 
 <!-- ──────────────────────── SERVICE + LOCAL ──────────────────────── -->
-<section class="about-section alt">
+<section class="paths">
   <div class="container">
     <div class="section-head reveal">
       <hr class="rule-gold" />
       <h2 class="display">Service, <em>and a place.</em></h2>
     </div>
 
-    <div class="about-prose reveal">
-      <p>We put a high value on service. Whether you&rsquo;re a family securing what matters most, a business owner protecting what you&rsquo;ve built, a family planning a legacy, or someone who simply wants an honest look at a policy you already own &mdash; we&rsquo;ll meet with you individually and craft the right approach, across every kind of coverage.</p>
+    <div class="paths-box reveal">
 
-      <p>And we&rsquo;re local. We live and work here in North County San Diego. Our children have gone to school here and we&rsquo;ve coached community soccer, basketball, and baseball teams. When you reach Remain, you&rsquo;re talking to someone down the road &mdash; not a call center across the country.</p>
+      <div class="path-col">
+        <span class="path-label">Our Service</span>
+        <h3>What we promise.</h3>
+        <p class="body">
+          We put a high value on service. Whether you&rsquo;re a family securing what matters most, a business owner protecting what you&rsquo;ve built, a family planning a legacy, or someone who simply wants an honest look at a policy you already own &mdash; we&rsquo;ll meet with you individually and craft the right approach, across every kind of coverage.
+        </p>
+      </div>
+
+      <div class="path-col">
+        <span class="path-label">Our Home</span>
+        <h3>Where we live.</h3>
+        <p class="body">
+          And we&rsquo;re local. We live and work here in North County San Diego. Our children have gone to school here and we&rsquo;ve coached community soccer, basketball, and baseball teams. When you reach Remain, you&rsquo;re talking to someone down the road &mdash; not a call center across the country.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
