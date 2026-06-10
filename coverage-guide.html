@@ -12,7 +12,8 @@
   gtag('js', new Date());
   gtag('config', 'G-E0T80D75GD');
 </script>
-<link rel="icon" type="image/png" href="/remain-mark.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="apple-touch-icon" href="/remain-mark.png" />
 <title>Interactive Assessment &mdash; Remain Life Insurance</title>
 <meta name="description" content="Answer a few quick questions about your situation and we&rsquo;ll point you toward the coverage worth exploring &mdash; then connect you with us, however you like. No forms, no figures, no pressure." />
@@ -1131,6 +1132,9 @@
   function renderResult(){
     const list = shortlist();
     const names = list.map(function(s){ return CAT[s].name; });
+    if (typeof gtag === 'function') {
+      gtag('event', 'assessment_complete', { products: names.join(', '), page_path: location.pathname });
+    }
     const phrase = names.length===1 ? names[0]
       : names.length===2 ? names[0]+' and '+names[1]
       : names.slice(0,-1).join(', ')+', and '+names[names.length-1];
@@ -1266,5 +1270,18 @@
   }
 </script>
 
+<script>
+(function () {
+  // GA4 conversion events: call/text/email taps + assessment completion
+  if (typeof gtag !== 'function') return;
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var name = h.indexOf('tel:') === 0 ? 'call_click' : h.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
+    gtag('event', name, { link_url: h.split('?')[0], page_path: location.pathname });
+  });
+})();
+</script>
 </body>
 </html>

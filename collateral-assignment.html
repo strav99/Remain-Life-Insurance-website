@@ -12,7 +12,8 @@
   gtag('js', new Date());
   gtag('config', 'G-E0T80D75GD');
 </script>
-<link rel="icon" type="image/png" href="/remain-mark.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="apple-touch-icon" href="/remain-mark.png" />
 <title>Collateral Assignment Life Insurance &mdash; SBA Loan &amp; Lender-Required Coverage &mdash; Remain Life Insurance</title>
 <meta name="description" content="Collateral assignment of life insurance for SBA loans, commercial real estate, and partner buy-ins — lender-required coverage placed fast so the deal can close." />
@@ -1259,5 +1260,18 @@
   }
 </script>
 
+<script>
+(function () {
+  // GA4 conversion events: call/text/email taps + assessment completion
+  if (typeof gtag !== 'function') return;
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var name = h.indexOf('tel:') === 0 ? 'call_click' : h.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
+    gtag('event', name, { link_url: h.split('?')[0], page_path: location.pathname });
+  });
+})();
+</script>
 </body>
 </html>
