@@ -8,8 +8,7 @@
   ],
   "redirects": [
     { "source": "/remainlife", "destination": "/", "permanent": true },
-    { "source": "/remainlife.html", "destination": "/", "permanent": true },
-    { "source": "/coverages", "destination": "/#coverages", "permanent": false }
+    { "source": "/remainlife.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
