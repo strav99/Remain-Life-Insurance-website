@@ -722,6 +722,10 @@
     margin-left: 0.4rem;
     letter-spacing: 0.04em;
   }
+  /* on phones, shrink the contact values so the long email fits on one line */
+  @media (max-width: 600px) {
+    .contact-path .val { font-size: 1.2rem; }
+  }
 
   /* ── Contact: guided start (topic → call / text / email) ───────────── */
   .contact-start { margin-top: 0.5rem; }
