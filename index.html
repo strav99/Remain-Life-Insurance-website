@@ -952,6 +952,31 @@
     --mist:      #C8E0D0;
   }
   ──────────────────────────────────────────────────────────────────────── */
+
+  /* ── Homepage family band (replaces the hub-and-spoke) ──────────────── */
+  .fam-band { background: var(--navy-deep); color: var(--paper); position: relative; overflow: hidden;
+    padding: clamp(4rem, 9vh, 7rem) 0; }
+  .fam-band::before { content:""; position:absolute; inset:0; pointer-events:none;
+    background: radial-gradient(ellipse at 82% 0%, rgba(160,135,82,0.12), transparent 60%),
+                radial-gradient(ellipse at 10% 100%, rgba(107,126,153,0.12), transparent 60%); }
+  .fam-band .container { position: relative; }
+  .fam-band .section-head h2 { color: var(--paper); }
+  .fam-band .section-head h2 em { color: var(--gold-soft); }
+  .fam-band .section-head .rule-gold { background: var(--gold-soft); }
+  .fam-band .fb-lede { max-width: 58ch; color: var(--mist); font-weight: 300; font-size: 1.1rem;
+    line-height: 1.78; margin: 0 0 2.2rem; }
+  .fam-band .fb-actions { display:flex; gap:1.4rem 1.8rem; flex-wrap:wrap; align-items:center; }
+  .fam-band .fb-btn { position:relative; display:inline-flex; align-items:center; gap:0.6em;
+    background: var(--gold-soft); color: var(--navy-deep); border-radius: 8px; padding: 0.95rem 1.7rem;
+    font-family: var(--label); font-size: 11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
+    transition: background 220ms ease, transform 220ms ease; }
+  .fam-band .fb-btn:hover { background:#fff; }
+  .fam-band .fb-btn .arrow { font-family: var(--serif); font-size: 14px; letter-spacing:0; transition: transform 220ms ease; }
+  .fam-band .fb-btn:hover .arrow { transform: translateX(4px); }
+  .fam-band .fb-link { color: var(--gold-soft); font-family: var(--label); font-size: 11px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; display:inline-flex; align-items:center; gap:0.4em;
+    border-bottom:1px solid transparent; padding-bottom:2px; transition: border-color 220ms ease; }
+  .fam-band .fb-link:hover { border-bottom-color: var(--gold-soft); }
 </style>
 <script type="application/ld+json">
 {
@@ -1174,205 +1199,24 @@
 
         <p>Our narrowness is deliberate. So is our depth.</p>
 
-        <p>See our coverages for our areas of focus.</p>
+        <p>See <a href="/coverages" style="color:var(--gold);border-bottom:1px solid var(--gold-soft);">our coverages</a> for our areas of focus.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ──────────────────────── WHAT WE DO ──────────────────────── -->
-<section class="practice" id="coverages">
+<!-- ──────────────────────── WHAT REMAINS ──────────────────────── -->
+<section class="fam-band" id="what-remains">
   <div class="container">
     <div class="section-head reveal">
       <hr class="rule-gold" />
-      <h2 class="display">What we <em>do.</em></h2>
+      <h2 class="display">Leave them more than <em>a policy.</em></h2>
     </div>
-
-    <p class="practice-intro reveal">
-      Coverage spans new policies, estate funding, retirement structure, mandated obligations, and corporate continuity. Each is its own discipline; each routes through one licensed entity.
-    </p>
-
-    <!-- Hub-and-spoke (desktop ≥880px) -->
-    <div class="diagram-wrap reveal" aria-hidden="true">
-      <svg viewBox="0 0 1200 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="diagram-title">
-        <title id="diagram-title">Remain Life Insurance coverages</title>
-        <circle cx="600" cy="540" r="192" fill="none" stroke="#C9B27E" stroke-width="0.6" opacity="0.10"/>
-        <circle cx="600" cy="540" r="418" fill="none" stroke="#C9B27E" stroke-width="0.8" opacity="0.16"/>
-        <g stroke="#C9B27E" stroke-width="1" opacity="0.28">
-          <line x1="600.0" y1="418.0" x2="600.0" y2="348.0"/>
-          <line x1="722.0" y1="540.0" x2="792.0" y2="540.0"/>
-          <line x1="600.0" y1="662.0" x2="600.0" y2="732.0"/>
-          <line x1="478.0" y1="540.0" x2="408.0" y2="540.0"/>
-          <line x1="645.7" y1="426.9" x2="753.2" y2="160.9"/>
-          <line x1="693.5" y1="461.6" x2="898.6" y2="289.5"/>
-          <line x1="719.3" y1="514.6" x2="934.1" y2="469.0"/>
-          <line x1="719.3" y1="565.4" x2="934.1" y2="611.0"/>
-          <line x1="693.5" y1="618.4" x2="898.6" y2="790.5"/>
-          <line x1="645.7" y1="653.1" x2="753.2" y2="919.1"/>
-          <line x1="554.3" y1="653.1" x2="446.8" y2="919.1"/>
-          <line x1="506.5" y1="618.4" x2="301.4" y2="790.5"/>
-          <line x1="480.7" y1="565.4" x2="265.9" y2="611.0"/>
-          <line x1="480.7" y1="514.6" x2="265.9" y2="469.0"/>
-          <line x1="506.5" y1="461.6" x2="301.4" y2="289.5"/>
-          <line x1="554.3" y1="426.9" x2="446.8" y2="160.9"/>
-        </g>
-        <g fill="#C9B27E" opacity="0.55">
-          <circle cx="753.2" cy="160.9" r="3"/>
-          <circle cx="898.6" cy="289.5" r="3"/>
-          <circle cx="934.1" cy="469.0" r="3"/>
-          <circle cx="934.1" cy="611.0" r="3"/>
-          <circle cx="898.6" cy="790.5" r="3"/>
-          <circle cx="753.2" cy="919.1" r="3"/>
-          <circle cx="446.8" cy="919.1" r="3"/>
-          <circle cx="301.4" cy="790.5" r="3"/>
-          <circle cx="265.9" cy="611.0" r="3"/>
-          <circle cx="265.9" cy="469.0" r="3"/>
-          <circle cx="301.4" cy="289.5" r="3"/>
-          <circle cx="446.8" cy="160.9" r="3"/>
-        </g>
-        <g>
-          <circle cx="600" cy="540" r="122" fill="#6B7E99" stroke="#A08752" stroke-width="2"/>
-          <circle cx="600" cy="540" r="115" fill="none" stroke="#C9B27E" stroke-width="0.5" opacity="0.32"/>
-          <text x="600" y="536" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="500" fill="#C9B27E" letter-spacing="7">REMAIN</text>
-          <line x1="534" y1="552" x2="666" y2="552" stroke="#C8D4E0" stroke-width="0.8" opacity="0.4"/>
-          <text x="600" y="573" text-anchor="middle" font-family="'Tenor Sans', sans-serif" font-size="11" fill="#F6F2EA" letter-spacing="4.5">LIFE INSURANCE</text>
-        </g>
-        <a href="/coverages/term-life" class="spoke-link">
-          <rect class="spoke-border" x="506.0" y="276.0" width="188" height="72" rx="7" fill="none" stroke="#A08752" stroke-width="2.5" opacity="0.95"/>
-          <rect class="spoke-fill" x="511.0" y="281.0" width="178" height="62" rx="4" fill="#6B7E99" stroke="#A08752" stroke-width="0.8"/>
-          <text x="600.0" y="305.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">TERM LIFE</text>
-          <text x="600.0" y="329.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Coverage for a set period</text>
-        </a>
-        <a href="/coverages/whole-life" class="spoke-link">
-          <rect class="spoke-border" x="792.0" y="504.0" width="188" height="72" rx="7" fill="none" stroke="#A08752" stroke-width="2.5" opacity="0.95"/>
-          <rect class="spoke-fill" x="797.0" y="509.0" width="178" height="62" rx="4" fill="#6B7E99" stroke="#A08752" stroke-width="0.8"/>
-          <text x="886.0" y="533.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">WHOLE LIFE</text>
-          <text x="886.0" y="557.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Permanent + cash value</text>
-        </a>
-        <a href="/coverages/universal-life" class="spoke-link">
-          <rect class="spoke-border" x="506.0" y="732.0" width="188" height="72" rx="7" fill="none" stroke="#A08752" stroke-width="2.5" opacity="0.95"/>
-          <rect class="spoke-fill" x="511.0" y="737.0" width="178" height="62" rx="4" fill="#6B7E99" stroke="#A08752" stroke-width="0.8"/>
-          <text x="600.0" y="761.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">UNIVERSAL LIFE</text>
-          <text x="600.0" y="785.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Flexible permanent (IUL)</text>
-        </a>
-        <a href="/coverages/variable-life" class="spoke-link">
-          <rect class="spoke-border" x="220.0" y="504.0" width="188" height="72" rx="7" fill="none" stroke="#A08752" stroke-width="2.5" opacity="0.95"/>
-          <rect class="spoke-fill" x="225.0" y="509.0" width="178" height="62" rx="4" fill="#6B7E99" stroke="#A08752" stroke-width="0.8"/>
-          <text x="314.0" y="533.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">VARIABLE LIFE</text>
-          <text x="314.0" y="557.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Permanent + investing</text>
-        </a>
-        <a href="/coverages/1035-exchange" class="spoke-link">
-          <rect class="spoke-border" x="663.6" y="75.3" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="668.6" y="80.3" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="771.6" y="108.3" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">1035 EXCHANGE</text>
-          <text x="771.6" y="132.3" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Tax-free exchange</text>
-        </a>
-        <a href="/coverages/term-conversion" class="spoke-link">
-          <rect class="spoke-border" x="842.8" y="205.6" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="847.8" y="210.6" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="950.8" y="238.6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">TERM CONVERSION</text>
-          <text x="950.8" y="262.6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Term &rarr; permanent</text>
-        </a>
-        <a href="/coverages/premium-finance" class="spoke-link">
-          <rect class="spoke-border" x="940.0" y="404.8" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="945.0" y="409.8" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="1048.0" y="437.8" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">PREMIUM FINANCE</text>
-          <text x="1048.0" y="461.8" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Advanced funding strategy</text>
-        </a>
-        <a href="/coverages/ilit" class="spoke-link">
-          <rect class="spoke-border" x="940.0" y="595.2" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="945.0" y="600.2" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="1048.0" y="628.2" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">ILIT</text>
-          <text x="1048.0" y="652.2" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Trust-owned coverage</text>
-        </a>
-        <a href="/coverages/key-person" class="spoke-link">
-          <rect class="spoke-border" x="842.8" y="794.4" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="847.8" y="799.4" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="950.8" y="827.4" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">KEY PERSON</text>
-          <text x="950.8" y="851.4" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Buy-sell / business</text>
-        </a>
-        <a href="/coverages/collateral-assignment" class="spoke-link">
-          <rect class="spoke-border" x="663.6" y="924.7" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="668.6" y="929.7" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="771.6" y="957.7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" fill="#F6F2EA" letter-spacing="0.3">COLLATERAL ASSIGNMENT</text>
-          <text x="771.6" y="981.7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">SBA &amp; commercial loans</text>
-        </a>
-        <a href="/coverages/412e3" class="spoke-link">
-          <rect class="spoke-border" x="320.4" y="924.7" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="325.4" y="929.7" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="428.4" y="957.7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" fill="#F6F2EA" letter-spacing="0.3">412(e)(3) PENSION</text>
-          <text x="428.4" y="981.7" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Defined-benefit / IRA rescue</text>
-        </a>
-        <a href="/coverages/professional-pension" class="spoke-link">
-          <rect class="spoke-border" x="141.2" y="794.4" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="146.2" y="799.4" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="249.2" y="827.4" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" fill="#F6F2EA" letter-spacing="0.3">PROFESSIONAL PENSION</text>
-          <text x="249.2" y="851.4" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Retirement plans</text>
-        </a>
-        <a href="/coverages/divorce-decree" class="spoke-link">
-          <rect class="spoke-border" x="44.0" y="595.2" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="49.0" y="600.2" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="152.0" y="628.2" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">DIVORCE DECREE</text>
-          <text x="152.0" y="652.2" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Court-ordered coverage</text>
-        </a>
-        <a href="/coverages/legacy-giving" class="spoke-link">
-          <rect class="spoke-border" x="44.0" y="404.8" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="49.0" y="409.8" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="152.0" y="437.8" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">LEGACY GIVING</text>
-          <text x="152.0" y="461.8" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Education &amp; charitable gifts</text>
-        </a>
-        <a href="/coverages/vgli" class="spoke-link">
-          <rect class="spoke-border" x="141.2" y="205.6" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="146.2" y="210.6" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="249.2" y="238.6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">VETERANS VGLI</text>
-          <text x="249.2" y="262.6" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Replace VGLI coverage</text>
-        </a>
-        <a href="/coverages/life-settlements" class="spoke-link">
-          <rect class="spoke-border" x="320.4" y="75.3" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
-          <rect class="spoke-fill" x="325.4" y="80.3" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
-          <text x="428.4" y="108.3" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="600" fill="#F6F2EA" letter-spacing="0.5">LIFE SETTLEMENTS</text>
-          <text x="428.4" y="132.3" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Sell your policy</text>
-        </a>
-      </svg>
-    </div>
-
-    <!-- Mobile-only practice list (visible <880px when diagram is hidden) -->
-    <nav class="practice-mobile reveal" aria-label="Coverages">
-      <a href="/coverages/term-life">Term Life</a>
-      <a href="/coverages/whole-life">Whole Life</a>
-      <a href="/coverages/universal-life">Universal Life</a>
-      <a href="/coverages/variable-life">Variable Life</a>
-      <a href="/coverages/ilit">ILIT Funding</a>
-      <a href="/coverages/1035-exchange">1035 Exchange</a>
-      <a href="/coverages/term-conversion">Term Conversion</a>
-      <a href="/coverages/life-settlements">Life Settlements</a>
-      <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
-      <a href="/coverages/professional-pension">Professional Pension Plans</a>
-      <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
-      <a href="/coverages/legacy-giving">Legacy Giving</a>
-      <a href="/coverages/divorce-decree">Court-Ordered Coverage</a>
-      <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
-      <a href="/coverages/vgli">VGLI Conversion</a>
-      <a href="/coverages/premium-finance">Premium Finance</a>
-    </nav>
-
-    <!-- Three pillars -->
-    <div class="practice-pillars reveal">
-      <div class="pillar">
-        <hr class="pillar-rule" />
-        <h3>Protection</h3>
-        <p>A policy isn&rsquo;t the point. The point is what arrives on the day a beneficiary claims &mdash; and we make sure it matches what you intended.</p>
-      </div>
-      <div class="pillar">
-        <hr class="pillar-rule" />
-        <h3>Continuity</h3>
-        <p>The policy you write at thirty-five looks different by fifty-five. We&rsquo;re there when those moments come.</p>
-      </div>
-      <div class="pillar">
-        <hr class="pillar-rule" />
-        <h3>Clarity</h3>
-        <p>You should be able to explain your own policy &mdash; what it does, what it costs, when it pays. If you can&rsquo;t, our work isn&rsquo;t done.</p>
-      </div>
+    <p class="fb-lede reveal">Beyond the coverage there is the plan, and the letter &mdash; the things that tell your family what you wanted, and let them hear your voice again. We built a free, private place to do both. Nothing is sent anywhere; it stays on your device.</p>
+    <div class="fb-actions reveal">
+      <a href="/family" class="fb-btn">Open What Remains <span class="arrow">&rarr;</span></a>
+      <a href="/coverages" class="fb-link">See all our coverages <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
