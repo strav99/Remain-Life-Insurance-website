@@ -446,6 +446,14 @@
   }
   .btn:hover .arrow { transform: translateX(4px); }
 
+  /* Hero assessment button: rounded + gold inner hairline (echoes the header chip) */
+  .btn-assess { position: relative; border-radius: 8px; }
+  .btn-assess::after {
+    content: ""; position: absolute; inset: 4px;
+    border: 1px solid rgba(201, 178, 126, 0.55); border-radius: 5px;
+    pointer-events: none;
+  }
+
   /* ── Section base ───────────────────────────────────────────────────── */
   section { padding: clamp(4.5rem, 11vh, 8rem) 0; }
 
@@ -1090,8 +1098,8 @@
           <span>Your Family&rsquo;s Clarity</span>
         </div>
 
-        <a href="#contact" class="btn">
-          <span>Begin a conversation</span>
+        <a href="/coverage-guide" class="btn btn-assess">
+          <span>Take the Interactive Assessment</span>
           <span class="arrow">&rarr;</span>
         </a>
 
