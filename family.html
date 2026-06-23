@@ -200,6 +200,10 @@
   nav.primary .nav-assess:hover { color: var(--gold); border-color: var(--gold); background: #fff; }
   nav.primary .nav-assess:hover::after { border-color: var(--gold); }
   nav.primary .nav-assess .na-arrow { color: var(--gold); }
+  nav.primary .nav-assess.two { flex-direction: column; align-items: flex-start; gap: 2px; }
+  nav.primary .nav-assess.two .na-label { line-height: 1.05; }
+  nav.primary .nav-assess .na-sub { font-family: var(--label); font-size: 9px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--fog); line-height: 1; }
   .brand-col .footer-about { margin: 0.95rem 0 0; }
   .brand-col .footer-about a {
     display: inline-flex; align-items: center; gap: 0.45em;
@@ -982,7 +986,7 @@
       </div>
 
       <a href="index.html#contact" class="cta">Begin a conversation</a>
-      <a href="/family" class="nav-assess" aria-current="page"><span class="na-label">Family</span><span class="na-arrow" aria-hidden="true">&rarr;</span></a>
+      <a href="/family" class="nav-assess two" aria-current="page"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
   </div>
 </header>
@@ -1206,6 +1210,8 @@
   function esc(t){ return (t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 
   var tabs=[].slice.call(document.querySelectorAll('.fam-tab')), panels=[].slice.call(document.querySelectorAll('.fam-panel'));
+  var want=(location.hash||'').replace('#','');
+  if(want==='letter'||want==='plan'||want==='checklist'){ var dt=(want==='checklist'?'plan':want); var wt=document.querySelector('.fam-tab[data-panel="'+dt+'"]'); if(wt) wt.click(); }
   tabs.forEach(function(t){ t.addEventListener('click', function(){
     tabs.forEach(function(x){ x.setAttribute('aria-selected', x===t?'true':'false'); });
     panels.forEach(function(p){ p.hidden = p.getAttribute('data-panel')!==t.getAttribute('data-panel'); });
