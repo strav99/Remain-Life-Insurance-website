@@ -756,6 +756,28 @@
   .contact-actions .btn { flex: 1 1 auto; justify-content: center; min-width: 7.5rem; }
   .btn-outline { background: transparent; color: var(--navy); }
   .btn-outline:hover { background: var(--navy); color: var(--paper); }
+  /* ── Contact form ── */
+  .contact-form { margin-top: 0.5rem; }
+  .contact-form .label { display: block; margin-bottom: 0.5rem; }
+  .cf-field { margin-bottom: 1.1rem; }
+  .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 560px) { .cf-row { grid-template-columns: 1fr; } }
+  .contact-form input, .contact-form textarea {
+    width: 100%; box-sizing: border-box;
+    font: 400 1.0625rem var(--sans); color: var(--navy);
+    background: var(--paper-soft); border: 1px solid var(--navy);
+    border-radius: 12px; padding: 0.85rem 1.1rem;
+    transition: border-color 240ms ease;
+  }
+  .contact-form input:hover, .contact-form textarea:hover,
+  .contact-form input:focus, .contact-form textarea:focus { border-color: var(--gold); outline: none; }
+  .contact-form textarea { resize: vertical; min-height: 110px; }
+  .cf-opt { color: var(--fog); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 10px; }
+  .contact-form button.btn { font-family: var(--sans); cursor: pointer; border: 0; }
+  #cf-submit[disabled] { opacity: 0.6; pointer-events: none; }
+  .cf-status { margin: 1.1rem 0 0; font-family: var(--sans); font-size: 0.95rem; line-height: 1.6; }
+  .cf-status.ok { color: var(--navy); }
+  .cf-status.err { color: #9a3b2e; }
   .contact-hint {
     margin-top: 1.1rem;
     font-family: var(--sans);
@@ -1273,30 +1295,45 @@
           <hr class="rule-gold" />
           <h2 class="display">Begin a <em>conversation.</em></h2>
         </div>
-        <p class="lede">Tell us what&rsquo;s on your mind and reach us however you like &mdash; pick a topic and we&rsquo;ll start the message for you.</p>
-        <div class="contact-start reveal">
-          <label class="label" for="topic-select">I&rsquo;d like to talk about</label>
-          <select id="topic-select" class="topic-select" aria-label="What would you like to talk about?">
-            <option value="" selected>Select a topic&hellip;</option>
-            <option value="family">Family coverage &mdash; term or whole life</option>
-            <option value="estate">Estate planning &mdash; ILIT, legacy giving</option>
-            <option value="business">Business continuity &mdash; key person, buy-sell, lender-required</option>
-            <option value="existing">A policy I already own &mdash; review, 1035, conversion</option>
-            <option value="other">General questions / something else</option>
-          </select>
-          <div class="contact-actions">
-            <a id="cta-call" href="tel:+17607505433" class="btn">
-              <span>Call</span><span class="arrow">&rarr;</span>
-            </a>
-            <a id="cta-text" href="sms:+17607505433" class="btn btn-outline">
-              <span>Text</span><span class="arrow">&rarr;</span>
-            </a>
-            <a id="cta-email" href="mailto:office@remainlifeinsurance.com" class="btn btn-outline">
-              <span>Email</span><span class="arrow">&rarr;</span>
-            </a>
+        <p class="lede">Tell us what&rsquo;s on your mind &mdash; share a few details and we&rsquo;ll be in touch. Prefer to talk now? Call or text us anytime.</p>
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <div class="cf-field">
+            <label class="label" for="cf-topic">I&rsquo;d like to talk about</label>
+            <select id="cf-topic" name="topic" class="topic-select">
+              <option value="" selected>Select a topic&hellip;</option>
+              <option value="Family coverage">Family coverage &mdash; term or whole life</option>
+              <option value="Estate planning">Estate planning &mdash; ILIT, legacy giving</option>
+              <option value="Business continuity">Business continuity &mdash; key person, buy-sell, lender-required</option>
+              <option value="A policy I already own">A policy I already own &mdash; review, 1035, conversion</option>
+              <option value="General questions">General questions / something else</option>
+            </select>
           </div>
-          <p class="contact-hint">We&rsquo;ll pre-fill the text or email with your topic &mdash; just hit send.</p>
-        </div>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label class="label" for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="cf-field">
+              <label class="label" for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="cf-field">
+            <label class="label" for="cf-phone">Phone <span class="cf-opt">(optional)</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="cf-field">
+            <label class="label" for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="A sentence or two about what you&rsquo;re looking for."></textarea>
+          </div>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" />
+          <div class="contact-actions">
+            <button type="submit" id="cf-submit" class="btn"><span>Send message</span><span class="arrow">&rarr;</span></button>
+            <a id="cta-call" href="tel:+17607505433" class="btn btn-outline"><span>Call</span><span class="arrow">&rarr;</span></a>
+            <a id="cta-text" href="sms:+17607505433" class="btn btn-outline"><span>Text</span><span class="arrow">&rarr;</span></a>
+          </div>
+          <p id="cf-status" class="cf-status" role="status" aria-live="polite" hidden></p>
+        </form>
       </div>
 
       <div class="contact-paths reveal">
@@ -1325,29 +1362,69 @@
 
 <script>
 (function () {
-  var sel = document.getElementById('topic-select');
-  if (!sel) return;
-  var PHONE = '+17607505433', EMAIL = 'office@remainlifeinsurance.com';
-  var msg = {
-    family:   'Hi Remain \u2014 I\u2019d like to talk about family coverage (term or whole life).',
-    estate:   'Hi Remain \u2014 I\u2019d like to talk about estate planning.',
-    business: 'Hi Remain \u2014 I\u2019d like to talk about business continuity for my company.',
-    existing: 'Hi Remain \u2014 I\u2019d like to talk about a policy I already own.',
-    other:    'Hi Remain \u2014 I\u2019d like to talk with you about life insurance.'
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var PHONE = '+17607505433';
+  var sel    = document.getElementById('cf-topic');
+  var textBtn= document.getElementById('cta-text');
+  var status = document.getElementById('cf-status');
+  var submit = document.getElementById('cf-submit');
+  var submitLabel = submit.querySelector('span');
+  var nameEl = document.getElementById('cf-name');
+  var emailEl= document.getElementById('cf-email');
+  var phoneEl= document.getElementById('cf-phone');
+  var msgEl  = document.getElementById('cf-message');
+  var honey  = form.querySelector('[name="_honey"]');
+
+  var topicMsg = {
+    'Family coverage':        'I\u2019d like to talk about family coverage (term or whole life).',
+    'Estate planning':        'I\u2019d like to talk about estate planning.',
+    'Business continuity':    'I\u2019d like to talk about business continuity for my company.',
+    'A policy I already own':  'I\u2019d like to talk about a policy I already own.',
+    'General questions':       'I have a general question about life insurance.'
   };
-  var subj = {
-    family: 'Family coverage', estate: 'Estate planning', business: 'Business continuity',
-    existing: 'A policy I already own', other: 'Life insurance'
-  };
-  var text = document.getElementById('cta-text');
-  var mail = document.getElementById('cta-email');
-  function update() {
-    var k = sel.value, m = msg[k] || msg.other, sj = subj[k] || subj.other;
-    text.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent(m);
-    mail.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Life insurance inquiry \u2014 ' + sj) + '&body=' + encodeURIComponent(m);
+  function updateText() {
+    var m = topicMsg[sel.value] || 'I\u2019d like to talk with you about life insurance.';
+    textBtn.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent('Hi Remain \u2014 ' + m);
   }
-  sel.addEventListener('change', update);
-  update();
+  sel.addEventListener('change', updateText);
+  updateText();
+
+  function setStatus(text, cls) { status.hidden = false; status.textContent = text; status.className = 'cf-status ' + cls; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (honey && honey.value) return; // bot trap
+    var name = nameEl.value.trim(), email = emailEl.value.trim();
+    if (!name || !email) { setStatus('Please add your name and email so we can reply.', 'err'); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { setStatus('That email doesn\u2019t look quite right \u2014 mind checking it?', 'err'); return; }
+    var topic = sel.value || 'General questions';
+    submit.disabled = true; submitLabel.textContent = 'Sending\u2026';
+    fetch('https://formsubmit.co/ajax/office@remainlifeinsurance.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name, email: email, phone: phoneEl.value.trim(),
+        topic: topic, message: msgEl.value.trim(),
+        _subject: 'New inquiry (' + topic + ') \u2014 remainlifeinsurance.com',
+        _template: 'table'
+      })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d && (d.success === 'true' || d.success === true)) {
+        form.reset(); updateText();
+        setStatus('Thank you \u2014 your message is on its way. We\u2019ll be in touch shortly.', 'ok');
+        if (window.gtag) gtag('event', 'contact_form_submit', { topic: topic });
+      } else {
+        setStatus('Sorry \u2014 that didn\u2019t go through. Please call or text us at (760) 750-5433.', 'err');
+      }
+    })
+    .catch(function () {
+      setStatus('Sorry \u2014 that didn\u2019t go through. Please call or text us at (760) 750-5433.', 'err');
+    })
+    .then(function () { submit.disabled = false; submitLabel.textContent = 'Send message'; });
+  });
 })();
 </script>
 </main>
