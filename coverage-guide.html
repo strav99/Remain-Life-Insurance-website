@@ -909,7 +909,6 @@
           <li role="none"><a role="menuitem" href="/coverages/term-life" class="current">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/variable-life">Variable Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
           <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
           <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
@@ -927,6 +926,7 @@
         </ul>
       </div>
 
+      <a href="tel:+17607505433" class="nav-phone" style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
       <a href="index.html#contact" class="cta">Begin a conversation</a>
       <a href="/family" class="nav-assess two"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
@@ -967,7 +967,6 @@
     'term-life':            {name:'Term Life',               blurb:'Affordable protection for a set season of life.',           url:'/coverages/term-life'},
     'whole-life':           {name:'Whole Life',              blurb:'Lifelong coverage that builds guaranteed cash value.',      url:'/coverages/whole-life'},
     'universal-life':       {name:'Universal Life',          blurb:'Permanent coverage with flexible premiums.',                url:'/coverages/universal-life'},
-    'variable-life':        {name:'Variable Life',           blurb:'Permanent coverage with market-based growth.',              url:'/coverages/variable-life'},
     'ilit':                 {name:'ILIT Funding',            blurb:'Keep proceeds outside your taxable estate.',                url:'/coverages/ilit'},
     'legacy-giving':        {name:'Legacy Giving',           blurb:'Turn a policy into a lasting charitable gift.',             url:'/coverages/legacy-giving'},
     'premium-finance':      {name:'Premium Finance',         blurb:'Fund large policies without tying up capital.',             url:'/coverages/premium-finance'},
@@ -1000,14 +999,13 @@
       q2:{prompt:'What kind of protection feels right?', options:[
         {label:'A season of life', sub:'While the kids grow up and the mortgage is paid', products:['term-life']},
         {label:'Lifelong, with cash value I can build', sub:'Coverage that never expires', products:['whole-life','universal-life']},
-        {label:'Lifelong, with growth tied to the markets', products:['variable-life']},
         {label:'I&rsquo;m honestly not sure yet', products:['term-life','whole-life']}
       ]},
       q3:{prompt:'What matters most right now?', options:[
         {label:'Keeping premiums as low as possible', products:['term-life']},
         {label:'Locking in coverage that never expires', products:['whole-life']},
         {label:'Flexibility to adjust premiums over time', products:['universal-life']},
-        {label:'Building wealth alongside protection', products:['whole-life','variable-life']}
+        {label:'Building wealth alongside protection', products:['whole-life']}
       ]} },
     estate:{ context:'for my estate and legacy planning',
       q2:{prompt:'What&rsquo;s the goal?', options:[
@@ -1183,7 +1181,6 @@
           <a href="/coverages/term-life" class="current">Term Life</a>
           <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
-          <a href="/coverages/variable-life">Variable Life</a>
           <a href="/coverages/ilit">ILIT Funding</a>
           <a href="/coverages/1035-exchange">1035 Exchange</a>
           <a href="/coverages/term-conversion">Term Conversion</a>
@@ -1223,7 +1220,7 @@
           <h4>Office</h4>
           <div class="stack">
             <a href="tel:+17607505433">(760) 750-LIFE (5433)</a>
-            <a href="mailto:office@remainlifeinsurance.com">office@remainlifeinsurance.com</a>
+            <span class="js-mailto"></span>
             <p>Encinitas, California</p>
           </div>
         </div>
@@ -1284,6 +1281,18 @@
     var h = a.getAttribute('href') || '';
     var name = h.indexOf('tel:') === 0 ? 'call_click' : h.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
     gtag('event', name, { link_url: h.split('?')[0], page_path: location.pathname });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var u='office',d='remainlifeinsurance',t='com';
+  var e=u+String.fromCharCode(64)+d+'.'+t;
+  document.querySelectorAll('.js-mailto').forEach(function(el){
+    var a=document.createElement('a');
+    a.href='mailto:'+e; a.textContent=e;
+    el.appendChild(a);
   });
 })();
 </script>

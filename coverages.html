@@ -941,7 +941,6 @@
           <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/variable-life">Variable Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
           <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
           <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
@@ -959,6 +958,7 @@
         </ul>
       </div>
 
+      <a href="tel:+17607505433" class="nav-phone" style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
       <a href="index.html#contact" class="cta">Begin a conversation</a>
       <a href="/family" class="nav-assess two"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
@@ -1045,12 +1045,6 @@
           <text x="600.0" y="761.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">UNIVERSAL LIFE</text>
           <text x="600.0" y="785.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Flexible permanent (IUL)</text>
         </a>
-        <a href="/coverages/variable-life" class="spoke-link">
-          <rect class="spoke-border" x="220.0" y="504.0" width="188" height="72" rx="7" fill="none" stroke="#A08752" stroke-width="2.5" opacity="0.95"/>
-          <rect class="spoke-fill" x="225.0" y="509.0" width="178" height="62" rx="4" fill="#6B7E99" stroke="#A08752" stroke-width="0.8"/>
-          <text x="314.0" y="533.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="600" fill="#F6F2EA" letter-spacing="1.2">VARIABLE LIFE</text>
-          <text x="314.0" y="557.0" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="13" font-weight="300" fill="#BFCBDC" letter-spacing="0.2">Permanent + investing</text>
-        </a>
         <a href="/coverages/1035-exchange" class="spoke-link">
           <rect class="spoke-border" x="663.6" y="75.3" width="216" height="80" rx="7" fill="none" stroke="#A08752" stroke-width="1.6" opacity="0.55"/>
           <rect class="spoke-fill" x="668.6" y="80.3" width="206" height="70" rx="4" fill="#2A3B5C" stroke="#A08752" stroke-width="0.8"/>
@@ -1131,7 +1125,6 @@
       <a href="/coverages/term-life">Term Life</a>
       <a href="/coverages/whole-life">Whole Life</a>
       <a href="/coverages/universal-life">Universal Life</a>
-      <a href="/coverages/variable-life">Variable Life</a>
       <a href="/coverages/ilit">ILIT Funding</a>
       <a href="/coverages/1035-exchange">1035 Exchange</a>
       <a href="/coverages/term-conversion">Term Conversion</a>
@@ -1193,7 +1186,6 @@
           <a href="/coverages/term-life">Term Life</a>
           <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
-          <a href="/coverages/variable-life">Variable Life</a>
           <a href="/coverages/ilit">ILIT Funding</a>
           <a href="/coverages/1035-exchange">1035 Exchange</a>
           <a href="/coverages/term-conversion">Term Conversion</a>
@@ -1233,7 +1225,7 @@
           <h4>Office</h4>
           <div class="stack">
             <a href="tel:+17607505433">(760) 750-LIFE (5433)</a>
-            <a href="mailto:office@remainlifeinsurance.com">office@remainlifeinsurance.com</a>
+            <span class="js-mailto"></span>
             <p>Encinitas, California</p>
           </div>
         </div>
@@ -1294,6 +1286,18 @@
     var h = a.getAttribute('href') || '';
     var name = h.indexOf('tel:') === 0 ? 'call_click' : h.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
     gtag('event', name, { link_url: h.split('?')[0], page_path: location.pathname });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var u='office',d='remainlifeinsurance',t='com';
+  var e=u+String.fromCharCode(64)+d+'.'+t;
+  document.querySelectorAll('.js-mailto').forEach(function(el){
+    var a=document.createElement('a');
+    a.href='mailto:'+e; a.textContent=e;
+    el.appendChild(a);
   });
 })();
 </script>

@@ -232,7 +232,6 @@
           <li><a href="/coverages/term-life">Term Life</a></li>
           <li><a href="/coverages/whole-life">Whole Life</a></li>
           <li><a href="/coverages/universal-life">Universal Life</a></li>
-          <li><a href="/coverages/variable-life">Variable Life</a></li>
           <li><a href="/coverages/ilit">ILIT Funding</a></li>
           <li><a href="/coverages/1035-exchange">1035 Exchange &amp; Policy Review</a></li>
           <li><a href="/coverages/term-conversion">Term Conversion</a></li>
@@ -255,7 +254,7 @@
 <footer class="site">
   <div class="container">
     <p>Remain Life Insurance Services, LLC &middot; Encinitas, California &middot; CA Lic. #6019240</p>
-    <p>(760) 750-LIFE &middot; <a href="mailto:office@remainlifeinsurance.com">office@remainlifeinsurance.com</a></p>
+    <p>(760) 750-LIFE &middot; <span class="js-mailto"></span></p>
   </div>
 </footer>
 
@@ -269,6 +268,18 @@
     var h = a.getAttribute('href') || '';
     var name = h.indexOf('tel:') === 0 ? 'call_click' : h.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
     gtag('event', name, { link_url: h.split('?')[0], page_path: location.pathname });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var u='office',d='remainlifeinsurance',t='com';
+  var e=u+String.fromCharCode(64)+d+'.'+t;
+  document.querySelectorAll('.js-mailto').forEach(function(el){
+    var a=document.createElement('a');
+    a.href='mailto:'+e; a.textContent=e;
+    el.appendChild(a);
   });
 })();
 </script>
