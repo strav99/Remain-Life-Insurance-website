@@ -264,6 +264,16 @@
     transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
   }
   .nav-dropdown .menu li { padding: 0; }
+  .nav-dropdown .menu .menu-group {
+    font-family: var(--label);
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.85rem 0.9rem 0.3rem;
+    margin: 0;
+  }
+  .nav-dropdown .menu .menu-group:first-child { padding-top: 0.3rem; }
   .nav-dropdown .menu a {
     display: block;
     padding: 0.55rem 0.9rem;
@@ -889,28 +899,33 @@
           Coverages
         </button>
         <ul class="menu" id="coverages-menu" role="menu">
+          <li role="presentation" class="menu-group">Families &amp; Individuals</li>
           <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
+          <li role="presentation" class="menu-group">Estates &amp; Legacy</li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
           <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
           <li role="none"><a role="menuitem" href="/coverages/pension-catapult">Pension Catapult</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/premium-finance" class="current">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Business Owners &amp; Professionals</li>
+          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
+          <li role="presentation" class="menu-group">Required &amp; Court-Ordered</li>
           <li role="none"><a role="menuitem" href="/coverages/divorce-decree">Court-Ordered Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/collateral-assignment">Lender-Required Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI (Veterans Conversion)</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/premium-finance" class="current">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Already Have a Policy?</li>
           <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
           <li role="none" class="view-all"><a role="menuitem" href="/coverages">See all coverages &rarr;</a></li>
         </ul>
       </div>
 
-      <a href="tel:+17607505433" class="nav-phone" style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
+      <a href="tel:+17607505433" class="nav-phone" style="font-family:var(--sans);font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
       <a href="index.html#contact" class="cta">Begin a conversation</a>
       <a href="/family" class="nav-assess two"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
@@ -934,7 +949,7 @@
     </h1>
 
     <p class="lede">
-      Premium finance funds the annual premium on a large permanent life insurance policy through a third-party lender. The client posts collateral, the loan is eventually repaid from the policy&rsquo;s own proceeds, and the net death benefit is what becomes the legacy. Used correctly on the right client, it puts a multi-million-dollar policy in place without liquidating other assets. Used incorrectly &mdash; on the wrong client, with the wrong assumptions &mdash; it is one of the most dangerous structures in the industry. The difference is the math.
+      Premium finance funds the annual premium on a large permanent life insurance policy through a third-party lender. The client posts collateral, the loan is eventually repaid from the policy&rsquo;s own proceeds, and the net death benefit is what becomes the legacy. Used correctly on the right client, it puts a multi-million-dollar policy in place without liquidating other assets. Used on the wrong client or with the wrong assumptions, it is one of the riskiest structures in the industry, which is why the math has to be tested first.
     </p>
 
     <a href="index.html#contact" class="btn hero-band-cta">
@@ -949,7 +964,7 @@
   <div class="container">
     <div class="section-head reveal">
       <hr class="rule-gold" />
-      <h2 class="display">Three structures. One <em>policy under leverage.</em></h2>
+      <h2 class="display">How the loan interest <em>gets paid.</em></h2>
       <p class="sub">The interest on the premium loan can be paid annually, partially capitalized, or fully capitalized into the loan balance. Each structure runs different leverage and different rate-shock exposure. The right answer depends on liquidity, time horizon, and how much rate movement the model can absorb.</p>
     </div>
 
@@ -993,7 +1008,7 @@
         <span class="path-label">Structure Three &middot; Aggressive</span>
         <h3>Capitalize fully. <em>Maximum leverage.</em></h3>
         <p class="body">
-          All interest capitalized. Zero out-of-pocket cost during the loan years. The loan balance compounds; the policy&rsquo;s cash value has to outpace the loan rate to deliver the projected net death benefit. Powerful when rates cooperate. Punitive when they don&rsquo;t.
+          All interest capitalized. Zero out-of-pocket cost during the loan years. The loan balance compounds; the policy&rsquo;s cash value has to outpace the loan rate to deliver the projected net death benefit. It works when rates cooperate and gets expensive quickly when they don&rsquo;t.
         </p>
         <ul>
           <li>Zero annual out-of-pocket during the financed years</li>
@@ -1017,7 +1032,7 @@
       <hr class="rule-gold" />
       <h2 class="display">Most premium finance illustrations <em>don&rsquo;t survive a rate shock.</em></h2>
       <p class="closing">
-        If any of these describe your situation, the right structure stress-tested across realistic scenarios &mdash; pay, partially capitalize, or fully capitalize &mdash; is the difference between a leveraged legacy and a leveraged liability.
+        Before you sign, have the structure stress-tested against realistic rate scenarios. The test shows whether the leverage helps your heirs or leaves them a debt.
       </p>
     </div>
 
@@ -1083,19 +1098,19 @@
           <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
           <a href="/coverages/ilit">ILIT Funding</a>
-          <a href="/coverages/1035-exchange">1035 Exchange</a>
-          <a href="/coverages/term-conversion">Term Conversion</a>
-          <a href="/coverages/life-settlements">Life Settlements</a>
-          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
-          <a href="/coverages/professional-pension">Professional Pension Plans</a>
-          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
           <a href="/coverages/legacy-giving">Legacy Giving</a>
           <a href="/coverages/pension-catapult">Pension Catapult</a>
+          <a href="/coverages/premium-finance" class="current">Premium Finance</a>
+          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
+          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
+          <a href="/coverages/professional-pension">Professional Pension Plans</a>
           <a href="/coverages/divorce-decree">Court-Ordered Coverage</a>
           <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
           <a href="/coverages/vgli">VGLI Conversion</a>
-          <a href="/coverages/premium-finance" class="current">Premium Finance</a>
           <a href="/coverages/policy-review">Policy Review</a>
+          <a href="/coverages/1035-exchange">1035 Exchange</a>
+          <a href="/coverages/term-conversion">Term Conversion</a>
+          <a href="/coverages/life-settlements">Life Settlements</a>
         </nav>
       </div>
     </div>

@@ -264,6 +264,16 @@
     transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
   }
   .nav-dropdown .menu li { padding: 0; }
+  .nav-dropdown .menu .menu-group {
+    font-family: var(--label);
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.85rem 0.9rem 0.3rem;
+    margin: 0;
+  }
+  .nav-dropdown .menu .menu-group:first-child { padding-top: 0.3rem; }
   .nav-dropdown .menu a {
     display: block;
     padding: 0.55rem 0.9rem;
@@ -948,28 +958,33 @@
           Coverages
         </button>
         <ul class="menu" id="coverages-menu" role="menu">
+          <li role="presentation" class="menu-group">Families &amp; Individuals</li>
           <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
+          <li role="presentation" class="menu-group">Estates &amp; Legacy</li>
           <li role="none"><a role="menuitem" href="/coverages/ilit">ILIT Funding</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
           <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
           <li role="none"><a role="menuitem" href="/coverages/pension-catapult">Pension Catapult</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Business Owners &amp; Professionals</li>
+          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
+          <li role="presentation" class="menu-group">Required &amp; Court-Ordered</li>
           <li role="none"><a role="menuitem" href="/coverages/divorce-decree" class="current">Court-Ordered Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/collateral-assignment">Lender-Required Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI (Veterans Conversion)</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Already Have a Policy?</li>
           <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
           <li role="none" class="view-all"><a role="menuitem" href="/coverages">See all coverages &rarr;</a></li>
         </ul>
       </div>
 
-      <a href="tel:+17607505433" class="nav-phone" style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
+      <a href="tel:+17607505433" class="nav-phone" style="font-family:var(--sans);font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
       <a href="index.html#contact" class="cta">Begin a conversation</a>
       <a href="/family" class="nav-assess two"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
@@ -1008,7 +1023,7 @@
   <div class="container">
     <div class="section-head reveal">
       <hr class="rule-gold" />
-      <h2 class="display">Three obligations. One <em>decree to satisfy.</em></h2>
+      <h2 class="display">What a decree <em>usually asks coverage to secure.</em></h2>
       <p class="sub">Most divorce decrees that require life insurance are securing one of three things. The obligation determines the term, the face amount, the beneficiary, and the ownership structure. Match the policy to whichever applies &mdash; or to both, when the decree compels both.</p>
     </div>
 
@@ -1076,7 +1091,7 @@
       <hr class="rule-gold" />
       <h2 class="display">Most decrees require coverage <em>within 30 to 90 days of judgment.</em></h2>
       <p class="closing">
-        If any of these describe your situation, decree-compliant coverage placed correctly the first time &mdash; with the documentation the court will actually accept &mdash; keeps the case closed and the obligation secured.
+        In each of these cases the coverage has to be placed correctly the first time, with documentation the court will accept.
       </p>
     </div>
 
@@ -1175,19 +1190,19 @@
           <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
           <a href="/coverages/ilit">ILIT Funding</a>
-          <a href="/coverages/1035-exchange">1035 Exchange</a>
-          <a href="/coverages/term-conversion">Term Conversion</a>
-          <a href="/coverages/life-settlements">Life Settlements</a>
-          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
-          <a href="/coverages/professional-pension">Professional Pension Plans</a>
-          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
           <a href="/coverages/legacy-giving">Legacy Giving</a>
           <a href="/coverages/pension-catapult">Pension Catapult</a>
+          <a href="/coverages/premium-finance">Premium Finance</a>
+          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
+          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
+          <a href="/coverages/professional-pension">Professional Pension Plans</a>
           <a href="/coverages/divorce-decree" class="current">Court-Ordered Coverage</a>
           <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
           <a href="/coverages/vgli">VGLI Conversion</a>
-          <a href="/coverages/premium-finance">Premium Finance</a>
           <a href="/coverages/policy-review">Policy Review</a>
+          <a href="/coverages/1035-exchange">1035 Exchange</a>
+          <a href="/coverages/term-conversion">Term Conversion</a>
+          <a href="/coverages/life-settlements">Life Settlements</a>
         </nav>
       </div>
     </div>

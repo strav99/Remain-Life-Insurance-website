@@ -264,6 +264,16 @@
     transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
   }
   .nav-dropdown .menu li { padding: 0; }
+  .nav-dropdown .menu .menu-group {
+    font-family: var(--label);
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 0.85rem 0.9rem 0.3rem;
+    margin: 0;
+  }
+  .nav-dropdown .menu .menu-group:first-child { padding-top: 0.3rem; }
   .nav-dropdown .menu a {
     display: block;
     padding: 0.55rem 0.9rem;
@@ -889,28 +899,33 @@
           Coverages
         </button>
         <ul class="menu" id="coverages-menu" role="menu">
+          <li role="presentation" class="menu-group">Families &amp; Individuals</li>
           <li role="none"><a role="menuitem" href="/coverages/term-life">Term Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/whole-life">Whole Life</a></li>
           <li role="none"><a role="menuitem" href="/coverages/universal-life">Universal Life</a></li>
+          <li role="presentation" class="menu-group">Estates &amp; Legacy</li>
           <li role="none"><a role="menuitem" href="/coverages/ilit" class="current">ILIT Funding</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
           <li role="none"><a role="menuitem" href="/coverages/legacy-giving">Legacy Giving</a></li>
           <li role="none"><a role="menuitem" href="/coverages/pension-catapult">Pension Catapult</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Business Owners &amp; Professionals</li>
+          <li role="none"><a role="menuitem" href="/coverages/key-person">Key Person &amp; Buy-Sell</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/professional-pension">Professional Pension Plans</a></li>
+          <li role="presentation" class="menu-group">Required &amp; Court-Ordered</li>
           <li role="none"><a role="menuitem" href="/coverages/divorce-decree">Court-Ordered Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/collateral-assignment">Lender-Required Coverage</a></li>
           <li role="none"><a role="menuitem" href="/coverages/vgli">VGLI (Veterans Conversion)</a></li>
-          <li role="none"><a role="menuitem" href="/coverages/premium-finance">Premium Finance</a></li>
+          <li role="presentation" class="menu-group">Already Have a Policy?</li>
           <li role="none"><a role="menuitem" href="/coverages/policy-review">Policy Review</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/1035-exchange">1035 Exchange</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/term-conversion">Term Conversion</a></li>
+          <li role="none"><a role="menuitem" href="/coverages/life-settlements">Life Settlements</a></li>
           <li role="none" class="view-all"><a role="menuitem" href="/coverages">See all coverages &rarr;</a></li>
         </ul>
       </div>
 
-      <a href="tel:+17607505433" class="nav-phone" style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
+      <a href="tel:+17607505433" class="nav-phone" style="font-family:var(--sans);font-size:0.95rem;font-weight:600;color:#172954;text-decoration:none;margin-right:0.5rem;letter-spacing:0.01em;white-space:nowrap;">(760) 750-LIFE</a>
       <a href="index.html#contact" class="cta">Begin a conversation</a>
       <a href="/family" class="nav-assess two"><span class="na-label">What Remains</span><span class="na-sub">your family checklist</span></a>
     </nav>
@@ -934,7 +949,7 @@
     </h1>
 
     <p class="lede">
-      An Irrevocable Life Insurance Trust owns and is the beneficiary of a life insurance policy on the grantor &mdash; the structure that keeps the death benefit outside the taxable estate. Done correctly, an ILIT delivers liquidity to heirs the moment estate tax comes due, without the death benefit itself being taxed at the federal estate-tax rate. The federal exemption is scheduled to step down in coming years; California&rsquo;s growing high-net-worth population is staring directly at the result. The trust is the wrapper. The policy is the liquidity. Both have to be funded correctly.
+      An Irrevocable Life Insurance Trust owns and is the beneficiary of a life insurance policy on the grantor &mdash; the structure that keeps the death benefit outside the taxable estate. Done correctly, an ILIT delivers liquidity to heirs the moment estate tax comes due, without the death benefit itself being taxed at the federal estate-tax rate. The federal exemption is high today, but Congress has changed it many times, and estates above it are taxed at 40 percent. The trust holds the policy and the policy supplies the cash, so both have to be set up correctly.
     </p>
 
     <a href="index.html#contact" class="btn hero-band-cta">
@@ -949,7 +964,7 @@
   <div class="container">
     <div class="section-head reveal">
       <hr class="rule-gold" />
-      <h2 class="display">Three products. One <em>trust to fund.</em></h2>
+      <h2 class="display">Choosing the policy <em>the trust will own.</em></h2>
       <p class="sub">Inside an ILIT, three products do most of the work. The right choice depends on the size of the estate, the time horizon, and whether the tax liability triggers at first death or second.</p>
     </div>
 
@@ -959,7 +974,7 @@
         <span class="path-label">Path One &middot; Term</span>
         <h3>Defined window. <em>Lower premium.</em></h3>
         <p class="body">
-          Term inside an ILIT is rare but real &mdash; used when the estate-tax exposure is bounded by a finite window (gifting strategy in motion, business sale planned, exemption sunset bridged). The trust holds the term, premium load is low, conversion privileges preserved.
+          Term inside an ILIT is rare but real &mdash; used when the estate-tax exposure is bounded by a finite window (a gifting strategy in motion or a planned business sale). The trust holds the term, premium load is low, conversion privileges preserved.
         </p>
         <ul>
           <li>Lowest premium per dollar of death benefit</li>
@@ -1017,14 +1032,14 @@
       <hr class="rule-gold" />
       <h2 class="display">Estate tax is due in nine months. <em>Cash needs to be ready.</em></h2>
       <p class="closing">
-        If any of these describe your situation, an ILIT funded with the right product &mdash; coordinated with your attorney and CPA &mdash; is the difference between a tax bill paid from cash and a tax bill paid by a forced sale of family assets.
+        With the right policy in the trust, coordinated with your attorney and CPA, the tax bill is paid from cash and the family keeps its assets.
       </p>
     </div>
 
     <ol class="scenario-list reveal">
       <li>
         <span class="num">i.</span>
-        <span>Your estate is approaching or above the federal exemption &mdash; and the exemption is scheduled to step down further.</span>
+        <span>Your estate is approaching or above the federal exemption and is likely to keep growing.</span>
       </li>
       <li>
         <span class="num">ii.</span>
@@ -1083,19 +1098,19 @@
           <a href="/coverages/whole-life">Whole Life</a>
           <a href="/coverages/universal-life">Universal Life</a>
           <a href="/coverages/ilit" class="current">ILIT Funding</a>
-          <a href="/coverages/1035-exchange">1035 Exchange</a>
-          <a href="/coverages/term-conversion">Term Conversion</a>
-          <a href="/coverages/life-settlements">Life Settlements</a>
-          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
-          <a href="/coverages/professional-pension">Professional Pension Plans</a>
-          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
           <a href="/coverages/legacy-giving">Legacy Giving</a>
           <a href="/coverages/pension-catapult">Pension Catapult</a>
+          <a href="/coverages/premium-finance">Premium Finance</a>
+          <a href="/coverages/key-person">Key Person &amp; Buy-Sell</a>
+          <a href="/coverages/412e3">412(e)(3) Defined-Benefit Plans</a>
+          <a href="/coverages/professional-pension">Professional Pension Plans</a>
           <a href="/coverages/divorce-decree">Court-Ordered Coverage</a>
           <a href="/coverages/collateral-assignment">Lender-Required Coverage</a>
           <a href="/coverages/vgli">VGLI Conversion</a>
-          <a href="/coverages/premium-finance">Premium Finance</a>
           <a href="/coverages/policy-review">Policy Review</a>
+          <a href="/coverages/1035-exchange">1035 Exchange</a>
+          <a href="/coverages/term-conversion">Term Conversion</a>
+          <a href="/coverages/life-settlements">Life Settlements</a>
         </nav>
       </div>
     </div>
