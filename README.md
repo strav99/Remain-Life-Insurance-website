@@ -5,8 +5,8 @@ Static site for **Remain Life Insurance Services, LLC** (Encinitas, California).
 ## What's here
 
 - `index.html` — homepage
-- 17 spoke pages, one per coverage:
-  `term-life.html`, `whole-life.html`, `universal-life.html`, `ilit-funding.html`, `legacy-giving.html`, `pension-catapult.html`, `1035-exchange.html`, `term-conversion.html`, `life-settlements.html`, `412e3.html`, `professional-pension.html`, `key-person.html`, `divorce-decree.html`, `collateral-assignment.html`, `vgli.html`, `premium-finance.html`, `policy-review.html`
+- 18 spoke pages, one per coverage:
+  `term-life.html`, `whole-life.html`, `universal-life.html`, `ilit-funding.html`, `legacy-giving.html`, `pension-catapult.html`, `ppli.html`, `1035-exchange.html`, `term-conversion.html`, `life-settlements.html`, `412e3.html`, `professional-pension.html`, `key-person.html`, `divorce-decree.html`, `collateral-assignment.html`, `vgli.html`, `premium-finance.html`, `policy-review.html`
 - `about.html`, `coverages.html`, `coverage-guide.html`, `family.html`, `privacy.html` — supporting pages
 - `404.html` — not-found page using brand chassis
 - `vercel.json` — host config (URL rewrites, security headers, cache rules)
@@ -47,5 +47,5 @@ The site is approved by the CA Department of Insurance (License #6019240, effect
 
 - `ilit-funding.html` keeps that filename for URL stability; the canonical slug is `/coverages/ilit`. Don't rename the file.
 - The dropdown nav, footer grid, and coda all reflect the same 17-coverage taxonomy. Any future coverage additions need to update all three places, plus `sitemap.xml` and `404.html`.
-- The hub-and-spoke diagram on `coverages.html` intentionally shows a subset of the coverages (3 core products and 12 spokes). It does not include Pension Catapult.
+- The hub-and-spoke diagram on `coverages.html` intentionally shows a subset of the coverages (3 core products and 12 spokes). It does not include Pension Catapult or PPLI.
 - Every page except the 404 uses the same grouped Coverages dropdown as the homepage; footer lists follow the same order.

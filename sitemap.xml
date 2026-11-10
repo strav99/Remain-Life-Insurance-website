@@ -101,6 +101,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://remainlifeinsurance.com/coverages/ppli</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://remainlifeinsurance.com/coverages/premium-finance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
